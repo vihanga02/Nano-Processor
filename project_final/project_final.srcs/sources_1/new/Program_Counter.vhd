@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 04/02/2024 02:20:40 PM
+-- Create Date: 04/04/2024 11:55:27 AM
 -- Design Name: 
--- Module Name: Mux_2_W_2_B - Behavioral
+-- Module Name: Program_Counter - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,24 +31,29 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity Mux_2_W_3_B is
-    Port ( A_in : in STD_LOGIC_VECTOR (2 downto 0);
-           B_in : in STD_LOGIC_VECTOR (2 downto 0);
-           S_in : in STD_LOGIC;
-           C_out : out STD_LOGIC_VECTOR (2 downto 0));
-end Mux_2_W_3_B;
+entity Program_Counter is
+   Port ( Counter_IN : in STD_LOGIC_VECTOR (2 downto 0);
+          Reset : in STD_LOGIC;
+          Clk : in STD_LOGIC;
+          Counter_Out : out STD_LOGIC_VECTOR (2 downto 0));
+end Program_Counter;
 
-architecture Behavioral of Mux_2_W_3_B is
+architecture Behavioral of Program_Counter is
+component Reg
+ Port ( D : in STD_LOGIC_VECTOR (2 downto 0);
+        En : in STD_LOGIC;
+        Clk : in STD_LOGIC;
+        Reset : in STD_LOGIC;
+        Q : out STD_LOGIC_VECTOR (2 downto 0));
+ end component;
 
 begin
- process (A_in, B_in, S_in)
-    begin   
-        if 
-            S_in = '0' then
-            C_out <= A_in;
-        else
-            C_out <= B_in;
-        end if;
-    end process;
+    Reg_0 : Reg  
+        Port map ( 
+            D => Counter_IN,
+            EN => '1',
+            Reset => Reset,
+            Clk => Clk,
+            Q => Counter_Out);    
 
 end Behavioral;

@@ -1,0 +1,55 @@
+
+*** Running vivado
+    with args -log Register_Bank.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Register_Bank.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source Register_Bank.tcl -notrace
+Command: synth_design -top Register_Bank -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 314130 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1252.477 ; gain = 86.914 ; free physical = 125 ; free virtual = 2902
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Register_Bank' [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Register_Bank.vhd:49]
+INFO: [Synth 8-3491] module 'Decoder_3_TO_8' declared at '/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_4/muthumala.srcs/sources_1/new/Decoder_3_TO_8.vhd:34' bound to instance 'Decode_3_to_8_0' of component 'Decoder_3_to_8' [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Register_Bank.vhd:70]
+INFO: [Synth 8-638] synthesizing module 'Decoder_3_TO_8' [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_4/muthumala.srcs/sources_1/new/Decoder_3_TO_8.vhd:40]
+INFO: [Synth 8-3491] module 'Decoder_2_TO_4' declared at '/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_4/muthumala.srcs/sources_1/new/Decoder_2_TO_4.vhd:34' bound to instance 'Decode_2_to_4_0' of component 'Decoder_2_to_4' [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_4/muthumala.srcs/sources_1/new/Decoder_3_TO_8.vhd:52]
+INFO: [Synth 8-638] synthesizing module 'Decoder_2_TO_4' [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_4/muthumala.srcs/sources_1/new/Decoder_2_TO_4.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'Decoder_2_TO_4' (1#1) [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_4/muthumala.srcs/sources_1/new/Decoder_2_TO_4.vhd:40]
+INFO: [Synth 8-3491] module 'Decoder_2_TO_4' declared at '/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_4/muthumala.srcs/sources_1/new/Decoder_2_TO_4.vhd:34' bound to instance 'Decode_2_to_4_1' of component 'Decoder_2_to_4' [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_4/muthumala.srcs/sources_1/new/Decoder_3_TO_8.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'Decoder_3_TO_8' (2#1) [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_4/muthumala.srcs/sources_1/new/Decoder_3_TO_8.vhd:40]
+ERROR: [Synth 8-549] port width mismatch for port 'I': port width = 3, actual width = 4 [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Register_Bank.vhd:70]
+INFO: [Synth 8-3491] module 'Reg' declared at '/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_7/muthumala.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_0' of component 'Reg' [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Register_Bank.vhd:76]
+ERROR: [Synth 8-3493] module 'reg' declared at '/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_7/muthumala.srcs/sources_1/new/Reg.vhd:34' does not have matching formal port for component port 'reset' [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Register_Bank.vhd:76]
+INFO: [Synth 8-3491] module 'Reg' declared at '/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_7/muthumala.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_1' of component 'Reg' [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Register_Bank.vhd:84]
+ERROR: [Synth 8-3493] module 'reg' declared at '/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_7/muthumala.srcs/sources_1/new/Reg.vhd:34' does not have matching formal port for component port 'reset' [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Register_Bank.vhd:84]
+INFO: [Synth 8-3491] module 'Reg' declared at '/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_7/muthumala.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_2' of component 'Reg' [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Register_Bank.vhd:92]
+ERROR: [Synth 8-3493] module 'reg' declared at '/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_7/muthumala.srcs/sources_1/new/Reg.vhd:34' does not have matching formal port for component port 'reset' [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Register_Bank.vhd:92]
+INFO: [Synth 8-3491] module 'Reg' declared at '/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_7/muthumala.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_3' of component 'Reg' [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Register_Bank.vhd:100]
+ERROR: [Synth 8-3493] module 'reg' declared at '/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_7/muthumala.srcs/sources_1/new/Reg.vhd:34' does not have matching formal port for component port 'reset' [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Register_Bank.vhd:100]
+INFO: [Synth 8-3491] module 'Reg' declared at '/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_7/muthumala.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_4' of component 'Reg' [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Register_Bank.vhd:108]
+ERROR: [Synth 8-3493] module 'reg' declared at '/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_7/muthumala.srcs/sources_1/new/Reg.vhd:34' does not have matching formal port for component port 'reset' [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Register_Bank.vhd:108]
+INFO: [Synth 8-3491] module 'Reg' declared at '/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_7/muthumala.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_5' of component 'Reg' [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Register_Bank.vhd:116]
+ERROR: [Synth 8-3493] module 'reg' declared at '/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_7/muthumala.srcs/sources_1/new/Reg.vhd:34' does not have matching formal port for component port 'reset' [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Register_Bank.vhd:116]
+INFO: [Synth 8-3491] module 'Reg' declared at '/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_7/muthumala.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_6' of component 'Reg' [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Register_Bank.vhd:124]
+ERROR: [Synth 8-3493] module 'reg' declared at '/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_7/muthumala.srcs/sources_1/new/Reg.vhd:34' does not have matching formal port for component port 'reset' [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Register_Bank.vhd:124]
+INFO: [Synth 8-3491] module 'Reg' declared at '/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_7/muthumala.srcs/sources_1/new/Reg.vhd:34' bound to instance 'Reg_7' of component 'Reg' [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Register_Bank.vhd:132]
+ERROR: [Synth 8-3493] module 'reg' declared at '/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_7/muthumala.srcs/sources_1/new/Reg.vhd:34' does not have matching formal port for component port 'reset' [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Register_Bank.vhd:132]
+ERROR: [Synth 8-285] failed synthesizing module 'Register_Bank' [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Register_Bank.vhd:49]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1297.086 ; gain = 131.523 ; free physical = 173 ; free virtual = 2932
+---------------------------------------------------------------------------------
+synthesize failed
+INFO: [Common 17-83] Releasing license: Synthesis
+18 Infos, 0 Warnings, 0 Critical Warnings and 11 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Thu Apr  4 11:41:48 2024...
