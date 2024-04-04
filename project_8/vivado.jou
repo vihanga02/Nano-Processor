@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2700185 on Thu Oct 24 18:46:05 MDT 2019
+# IP Build 2699827 on Thu Oct 24 21:16:38 MDT 2019
+# Start of session at: Thu Mar 21 11:53:25 2024
+# Process ID: 8224
+# Current directory: C:/Users/WORKSHOP/Downloads/project_8/project_8
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8960 C:\Users\WORKSHOP\Downloads\project_8\project_8\project_7.xpr
+# Log file: C:/Users/WORKSHOP/Downloads/project_8/project_8/vivado.log
+# Journal file: C:/Users/WORKSHOP/Downloads/project_8/project_8\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/WORKSHOP/Downloads/project_8/project_8/project_7.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+add_files -norecurse C:/Users/WORKSHOP/Downloads/AU.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+add_files -norecurse {C:/Users/WORKSHOP/Downloads/Reg.vhd C:/Users/WORKSHOP/Downloads/HA.vhd C:/Users/WORKSHOP/Downloads/RCA_4.vhd C:/Users/WORKSHOP/Downloads/Slow_Clk.vhd C:/Users/WORKSHOP/Downloads/FA.vhd}
+update_compile_order -fileset sources_1
+launch_simulation
+source TB_LUT_16_7.tcl
+add_files -fileset constrs_1 -norecurse C:/Users/WORKSHOP/Downloads/Basys3Labs.xdc
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+open_run impl_1
+close_sim

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Fri Mar 22 19:50:59 2024
+# Process ID: 22329
+# Current directory: /home/vihangamuthumala/Documents/project_8_saved/project_8_saved.runs/synth_1
+# Command line: vivado -log AU_7_seg.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source AU_7_seg.tcl
+# Log file: /home/vihangamuthumala/Documents/project_8_saved/project_8_saved.runs/synth_1/AU_7_seg.vds
+# Journal file: /home/vihangamuthumala/Documents/project_8_saved/project_8_saved.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source AU_7_seg.tcl -notrace

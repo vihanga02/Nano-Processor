@@ -1,0 +1,4 @@
+Running: xsim.dir/Circuit2Sim_behav/xsimk.exe -simmode gui -wdb Circuit2Sim_behav.wdb -simrunnum 0 -socket 1540
+Design successfully loaded
+Design Loading Memory Usage: 5996 KB (Peak: 5996 KB)
+Design Loading CPU Usage: 15 ms

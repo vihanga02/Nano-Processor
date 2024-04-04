@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2700185 on Thu Oct 24 18:46:05 MDT 2019
+# IP Build 2699827 on Thu Oct 24 21:16:38 MDT 2019
+# Start of session at: Tue Mar  5 11:29:44 2024
+# Process ID: 9164
+# Current directory: C:/Users/WORKSHOP/Downloads/project_6/project_6.runs/synth_1
+# Command line: vivado.exe -log D_FF.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source D_FF.tcl
+# Log file: C:/Users/WORKSHOP/Downloads/project_6/project_6.runs/synth_1/D_FF.vds
+# Journal file: C:/Users/WORKSHOP/Downloads/project_6/project_6.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source D_FF.tcl -notrace

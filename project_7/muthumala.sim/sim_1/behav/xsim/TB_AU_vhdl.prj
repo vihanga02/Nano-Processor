@@ -1,0 +1,12 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../muthumala.srcs/sources_1/new/AU.vhd" \
+"../../../../../Sem 2/Computer Organizing and Digital Design/Labs/Lab3/Lab3.srcs/sources_1/new/FA1.vhd" \
+"../../../../../Sem 2/Computer Organizing and Digital Design/Labs/Lab3/Lab3.srcs/sources_1/new/HA.vhd" \
+"../../../../../Sem 2/Computer Organizing and Digital Design/Labs/Lab3/Lab3.srcs/sources_1/new/RCA_4.vhd" \
+"../../../../muthumala.srcs/sources_1/new/Reg.vhd" \
+"../../../../../Sem 2/Computer Organizing and Digital Design/Labs/Lab 5/Lab 5.srcs/sources_1/new/Slow_Clk.vhd" \
+"../../../../muthumala.srcs/sim_1/new/TB_AU.vhd" \
+
+# Do not sort compile order
+nosort

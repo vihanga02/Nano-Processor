@@ -1,0 +1,123 @@
+/*
+
+Xilinx Vivado v2018.1 (64-bit) [Major: 2018, Minor: 1]
+SW Build: 2188600 on Wed Apr  4 18:40:38 MDT 2018
+IP Build: 2185939 on Wed Apr  4 20:55:05 MDT 2018
+
+Process ID: 288
+License: Customer
+
+Current time: 	Tue Feb 20 18:38:39 IST 2024
+Time zone: 	India Standard Time (Asia/Colombo)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1536x864
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 17 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.1/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.1/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	USER
+User home directory: C:/Users/USER
+User working directory: C:/Users/USER/Desktop/project_4/muthumala
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.1
+RDI_DATADIR: C:/Xilinx/Vivado/2018.1/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.1/bin
+
+Vivado preferences file location: C:/Users/USER/AppData/Roaming/Xilinx/Vivado/2018.1/vivado.xml
+Vivado preferences directory: C:/Users/USER/AppData/Roaming/Xilinx/Vivado/2018.1/
+Vivado layouts directory: C:/Users/USER/AppData/Roaming/Xilinx/Vivado/2018.1/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/USER/Desktop/project_4/muthumala/vivado.log
+Vivado journal file location: 	C:/Users/USER/Desktop/project_4/muthumala/vivado.jou
+Engine tmp dir: 	C:/Users/USER/Desktop/project_4/muthumala/.Xil/Vivado-288-MSI
+
+GUI allocated memory:	224 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 595 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 56 MB (+56040kb) [00:00:08]
+// [Engine Memory]: 512 MB (+385260kb) [00:00:08]
+// Opening Vivado Project: C:\Users\USER\Desktop\project_4\muthumala\muthumala.xpr. Version: Vivado v2018.1 
+// bv (ch):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/USER/Desktop/project_4/muthumala/muthumala.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 575 MB (+39783kb) [00:00:10]
+// Tcl Message: open_project C:/Users/USER/Desktop/project_4/muthumala/muthumala.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.1/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 62 MB (+3960kb) [00:00:12]
+// [Engine Memory]: 646 MB (+43647kb) [00:00:12]
+// [GUI Memory]: 66 MB (+898kb) [00:00:12]
+// [Engine Memory]: 679 MB (+1162kb) [00:00:12]
+// [GUI Memory]: 70 MB (+26kb) [00:00:12]
+// Project name: muthumala; location: C:/Users/USER/Desktop/project_4/muthumala; part: xc7a35tcpg236-1
+dismissDialog("Open Project"); // bv (ch)
+// HMemoryUtils.trashcanNow. Engine heap size: 712 MB. GUI used memory: 38 MB. Current time: 2/20/24 6:38:41 PM IST
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 588 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Mux_8_TO_1_1(Behavioral) (Mux_8_TO_1_.vhd)]", 1, true); // B (D, ch) - Node
+// [GUI Memory]: 74 MB (+284kb) [00:10:02]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Mux_8_TO_1_1(Behavioral) (Mux_8_TO_1_.vhd)]", 1, true, false, false, false, false, true); // B (D, ch) - Double Click - Node
+// [GUI Memory]: 78 MB (+539kb) [00:10:05]
+// [Engine Memory]: 716 MB (+3128kb) [00:10:05]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 4, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 4, true, false, false, false, false, true); // B (D, ch) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 5, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, TB_DECODER_2_TO_4(Behavioral) (TB_DECODER_2_TO_4.vhd)]", 7, true, false, false, false, false, true); // B (D, ch) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, TB_Mux_8_TO_1_1(Behavioral) (TB_Mux_8_TO_1_1.vhd)]", 6, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, TB_Mux_8_TO_1_1(Behavioral) (TB_Mux_8_TO_1_1.vhd)]", 6, true, false, false, false, false, true); // B (D, ch) - Double Click - Node
+selectCodeEditor("TB_Mux_8_TO_1_1.vhd", 265, 151); // cd (w, ch)
+typeControlKey((HResource) null, "TB_Mux_8_TO_1_1.vhd", 'c'); // cd (w, ch)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 82 MB (+167kb) [00:14:26]

@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/USER/Desktop/project_4/muthumala/muthumala.srcs/sources_1/new/Mux_8_TO_1_.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Mux_8_TO_1_1
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/USER/Desktop/project_4/muthumala/muthumala.srcs/sim_1/new/TB_Mux_8_TO_1_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TB_Mux_8_TO_1_1

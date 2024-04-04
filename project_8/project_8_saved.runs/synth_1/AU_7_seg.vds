@@ -1,0 +1,342 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Fri Mar 22 19:50:59 2024
+# Process ID: 22329
+# Current directory: /home/vihangamuthumala/Documents/project_8_saved/project_8_saved.runs/synth_1
+# Command line: vivado -log AU_7_seg.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source AU_7_seg.tcl
+# Log file: /home/vihangamuthumala/Documents/project_8_saved/project_8_saved.runs/synth_1/AU_7_seg.vds
+# Journal file: /home/vihangamuthumala/Documents/project_8_saved/project_8_saved.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source AU_7_seg.tcl -notrace
+Command: synth_design -top AU_7_seg -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 22441 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1252.477 ; gain = 86.914 ; free physical = 245 ; free virtual = 7332
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'AU_7_seg' [/home/vihangamuthumala/Documents/project_8_saved/project_8_saved.srcs/sources_1/new/AU_7_seg.vhd:45]
+INFO: [Synth 8-3491] module 'AU' declared at '/home/vihangamuthumala/Downloads/project_8/AU.vhd:34' bound to instance 'AU_0' of component 'AU' [/home/vihangamuthumala/Documents/project_8_saved/project_8_saved.srcs/sources_1/new/AU_7_seg.vhd:66]
+INFO: [Synth 8-638] synthesizing module 'AU' [/home/vihangamuthumala/Downloads/project_8/AU.vhd:43]
+INFO: [Synth 8-3491] module 'Slow_Clk' declared at '/home/vihangamuthumala/Downloads/project_8/Slow_Clk.vhd:34' bound to instance 'Slow_Clk_0' of component 'Slow_Clk' [/home/vihangamuthumala/Downloads/project_8/AU.vhd:81]
+INFO: [Synth 8-638] synthesizing module 'Slow_Clk' [/home/vihangamuthumala/Downloads/project_8/Slow_Clk.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'Slow_Clk' (1#1) [/home/vihangamuthumala/Downloads/project_8/Slow_Clk.vhd:39]
+INFO: [Synth 8-3491] module 'Reg' declared at '/home/vihangamuthumala/Downloads/project_8/Reg.vhd:34' bound to instance 'Reg_0' of component 'Reg' [/home/vihangamuthumala/Downloads/project_8/AU.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'Reg' [/home/vihangamuthumala/Downloads/project_8/Reg.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'Reg' (2#1) [/home/vihangamuthumala/Downloads/project_8/Reg.vhd:41]
+INFO: [Synth 8-3491] module 'Reg' declared at '/home/vihangamuthumala/Downloads/project_8/Reg.vhd:34' bound to instance 'Reg_1' of component 'Reg' [/home/vihangamuthumala/Downloads/project_8/AU.vhd:93]
+INFO: [Synth 8-3491] module 'RCA_4' declared at '/home/vihangamuthumala/Downloads/project_8/RCA_4.vhd:34' bound to instance 'RCA_4_0' of component 'RCA_4' [/home/vihangamuthumala/Downloads/project_8/AU.vhd:99]
+INFO: [Synth 8-638] synthesizing module 'RCA_4' [/home/vihangamuthumala/Downloads/project_8/RCA_4.vhd:51]
+INFO: [Synth 8-3491] module 'FA' declared at '/home/vihangamuthumala/Downloads/project_8/FA.vhd:34' bound to instance 'FA_0' of component 'FA' [/home/vihangamuthumala/Downloads/project_8/RCA_4.vhd:63]
+INFO: [Synth 8-638] synthesizing module 'FA' [/home/vihangamuthumala/Downloads/project_8/FA.vhd:42]
+INFO: [Synth 8-3491] module 'HA' declared at '/home/vihangamuthumala/Downloads/project_8/HA.vhd:34' bound to instance 'HA_0' of component 'HA' [/home/vihangamuthumala/Downloads/project_8/FA.vhd:52]
+INFO: [Synth 8-638] synthesizing module 'HA' [/home/vihangamuthumala/Downloads/project_8/HA.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'HA' (3#1) [/home/vihangamuthumala/Downloads/project_8/HA.vhd:41]
+INFO: [Synth 8-3491] module 'HA' declared at '/home/vihangamuthumala/Downloads/project_8/HA.vhd:34' bound to instance 'HA_1' of component 'HA' [/home/vihangamuthumala/Downloads/project_8/FA.vhd:58]
+INFO: [Synth 8-256] done synthesizing module 'FA' (4#1) [/home/vihangamuthumala/Downloads/project_8/FA.vhd:42]
+INFO: [Synth 8-3491] module 'FA' declared at '/home/vihangamuthumala/Downloads/project_8/FA.vhd:34' bound to instance 'FA_1' of component 'FA' [/home/vihangamuthumala/Downloads/project_8/RCA_4.vhd:70]
+INFO: [Synth 8-3491] module 'FA' declared at '/home/vihangamuthumala/Downloads/project_8/FA.vhd:34' bound to instance 'FA_2' of component 'FA' [/home/vihangamuthumala/Downloads/project_8/RCA_4.vhd:77]
+INFO: [Synth 8-3491] module 'FA' declared at '/home/vihangamuthumala/Downloads/project_8/FA.vhd:34' bound to instance 'FA_3' of component 'FA' [/home/vihangamuthumala/Downloads/project_8/RCA_4.vhd:84]
+INFO: [Synth 8-256] done synthesizing module 'RCA_4' (5#1) [/home/vihangamuthumala/Downloads/project_8/RCA_4.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'AU' (6#1) [/home/vihangamuthumala/Downloads/project_8/AU.vhd:43]
+INFO: [Synth 8-3491] module 'LUT_16_7' declared at '/home/vihangamuthumala/Documents/project_8_saved/project_8_saved.srcs/sources_1/new/LUT_16_7.vhd:35' bound to instance 'LUT_16_7_0' of component 'LUT_16_7' [/home/vihangamuthumala/Documents/project_8_saved/project_8_saved.srcs/sources_1/new/AU_7_seg.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'LUT_16_7' [/home/vihangamuthumala/Documents/project_8_saved/project_8_saved.srcs/sources_1/new/LUT_16_7.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'LUT_16_7' (7#1) [/home/vihangamuthumala/Documents/project_8_saved/project_8_saved.srcs/sources_1/new/LUT_16_7.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'AU_7_seg' (8#1) [/home/vihangamuthumala/Documents/project_8_saved/project_8_saved.srcs/sources_1/new/AU_7_seg.vhd:45]
+WARNING: [Synth 8-3917] design AU_7_seg has port an[3] driven by constant 1
+WARNING: [Synth 8-3917] design AU_7_seg has port an[2] driven by constant 1
+WARNING: [Synth 8-3917] design AU_7_seg has port an[1] driven by constant 1
+WARNING: [Synth 8-3917] design AU_7_seg has port an[0] driven by constant 0
+WARNING: [Synth 8-3331] design RCA_4 has unconnected port C_in
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1298.086 ; gain = 132.523 ; free physical = 243 ; free virtual = 7332
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1298.086 ; gain = 132.523 ; free physical = 245 ; free virtual = 7333
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1298.086 ; gain = 132.523 ; free physical = 245 ; free virtual = 7333
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/vihangamuthumala/Downloads/project_8/Basys3Labs.xdc]
+Finished Parsing XDC File [/home/vihangamuthumala/Downloads/project_8/Basys3Labs.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/vihangamuthumala/Downloads/project_8/Basys3Labs.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/AU_7_seg_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/AU_7_seg_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1614.391 ; gain = 0.000 ; free physical = 160 ; free virtual = 7086
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:55 . Memory (MB): peak = 1614.391 ; gain = 448.828 ; free physical = 181 ; free virtual = 7123
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:55 . Memory (MB): peak = 1614.391 ; gain = 448.828 ; free physical = 181 ; free virtual = 7123
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:55 . Memory (MB): peak = 1614.391 ; gain = 448.828 ; free physical = 182 ; free virtual = 7124
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clk_status" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "sevenSegment_ROM" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:55 . Memory (MB): peak = 1614.391 ; gain = 448.828 ; free physical = 163 ; free virtual = 7105
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 8     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	  17 Input      7 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Slow_Clk 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module Reg 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+Module HA 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module LUT_16_7 
+Detailed RTL Component Info : 
++---Muxes : 
+	  17 Input      7 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5545] ROM "AU_0/Slow_Clk_0/count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "AU_0/Slow_Clk_0/clk_status" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-3917] design AU_7_seg has port an[3] driven by constant 1
+WARNING: [Synth 8-3917] design AU_7_seg has port an[2] driven by constant 1
+WARNING: [Synth 8-3917] design AU_7_seg has port an[1] driven by constant 1
+WARNING: [Synth 8-3917] design AU_7_seg has port an[0] driven by constant 0
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:56 . Memory (MB): peak = 1614.391 ; gain = 448.828 ; free physical = 152 ; free virtual = 7098
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:01:08 . Memory (MB): peak = 1614.391 ; gain = 448.828 ; free physical = 169 ; free virtual = 7023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:01:08 . Memory (MB): peak = 1614.391 ; gain = 448.828 ; free physical = 158 ; free virtual = 7011
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:01:08 . Memory (MB): peak = 1614.391 ; gain = 448.828 ; free physical = 158 ; free virtual = 7011
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:01:08 . Memory (MB): peak = 1614.391 ; gain = 448.828 ; free physical = 156 ; free virtual = 7010
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:01:08 . Memory (MB): peak = 1614.391 ; gain = 448.828 ; free physical = 156 ; free virtual = 7010
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:01:08 . Memory (MB): peak = 1614.391 ; gain = 448.828 ; free physical = 156 ; free virtual = 7010
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:01:08 . Memory (MB): peak = 1614.391 ; gain = 448.828 ; free physical = 156 ; free virtual = 7010
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:01:08 . Memory (MB): peak = 1614.391 ; gain = 448.828 ; free physical = 156 ; free virtual = 7010
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:01:08 . Memory (MB): peak = 1614.391 ; gain = 448.828 ; free physical = 156 ; free virtual = 7010
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     8|
+|3     |LUT1   |     2|
+|4     |LUT2   |     5|
+|5     |LUT3   |     2|
+|6     |LUT4   |    11|
+|7     |LUT5   |     5|
+|8     |LUT6   |     8|
+|9     |FDRE   |    42|
+|10    |IBUF   |     6|
+|11    |OBUF   |    17|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------------+---------+------+
+|      |Instance       |Module   |Cells |
++------+---------------+---------+------+
+|1     |top            |         |   107|
+|2     |  AU_0         |AU       |    82|
+|3     |    Reg_0      |Reg      |     9|
+|4     |    Reg_1      |Reg_0    |    19|
+|5     |    Slow_Clk_0 |Slow_Clk |    54|
++------+---------------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:01:08 . Memory (MB): peak = 1614.391 ; gain = 448.828 ; free physical = 156 ; free virtual = 7010
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 1614.391 ; gain = 132.523 ; free physical = 208 ; free virtual = 7062
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:01:09 . Memory (MB): peak = 1614.398 ; gain = 448.828 ; free physical = 208 ; free virtual = 7062
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+45 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:01:11 . Memory (MB): peak = 1614.398 ; gain = 459.398 ; free physical = 204 ; free virtual = 7058
+INFO: [Common 17-1381] The checkpoint '/home/vihangamuthumala/Documents/project_8_saved/project_8_saved.runs/synth_1/AU_7_seg.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file AU_7_seg_utilization_synth.rpt -pb AU_7_seg_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.14 . Memory (MB): peak = 1638.402 ; gain = 0.000 ; free physical = 217 ; free virtual = 7074
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 22 19:52:20 2024...

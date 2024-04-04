@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2700185 on Thu Oct 24 18:46:05 MDT 2019
+# IP Build 2699827 on Thu Oct 24 21:16:38 MDT 2019
+# Start of session at: Tue Jan 30 13:53:32 2024
+# Process ID: 8892
+# Current directory: C:/Users/WORKSHOP/AppData/Roaming/Xilinx/Vivado/Documents/project_1/project_1.runs/impl_1
+# Command line: vivado.exe -log Lab1.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Lab1.tcl -notrace
+# Log file: C:/Users/WORKSHOP/AppData/Roaming/Xilinx/Vivado/Documents/project_1/project_1.runs/impl_1/Lab1.vdi
+# Journal file: C:/Users/WORKSHOP/AppData/Roaming/Xilinx/Vivado/Documents/project_1/project_1.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source Lab1.tcl -notrace

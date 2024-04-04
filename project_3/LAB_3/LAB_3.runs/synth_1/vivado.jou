@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2.1 (64-bit)
+# SW Build 2288692 on Thu Jul 26 18:24:02 MDT 2018
+# IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
+# Start of session at: Tue Feb 13 15:40:25 2024
+# Process ID: 7300
+# Current directory: C:/Users/Workshop/Desktop/LAB_3/LAB_3.runs/synth_1
+# Command line: vivado.exe -log FA.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source FA.tcl
+# Log file: C:/Users/Workshop/Desktop/LAB_3/LAB_3.runs/synth_1/FA.vds
+# Journal file: C:/Users/Workshop/Desktop/LAB_3/LAB_3.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source FA.tcl -notrace

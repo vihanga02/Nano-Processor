@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Fri Mar 15 12:05:56 2024
+# Process ID: 10376
+# Current directory: G:/muthumala/muthumala.runs/synth_1
+# Command line: vivado.exe -log AU.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source AU.tcl
+# Log file: G:/muthumala/muthumala.runs/synth_1/AU.vds
+# Journal file: G:/muthumala/muthumala.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source AU.tcl -notrace
