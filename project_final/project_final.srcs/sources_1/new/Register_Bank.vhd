@@ -55,7 +55,7 @@ component Decoder_3_to_8
     Y: out STD_LOGIC_VECTOR );
  end component;
  
- component Reg
+ component Reg_4_B
  Port ( D : in STD_LOGIC_VECTOR (3 downto 0);
         En : in STD_LOGIC;
         Clk : in STD_LOGIC;
@@ -64,7 +64,7 @@ component Decoder_3_to_8
  end component;
  
  signal reg_en_out : std_logic_vector (7 downto 0);
- signal reg_en_in : std_logic_vector(3 downto 0);
+ signal reg_en_in : std_logic_vector(2 downto 0);
 
 begin
     Decode_3_to_8_0 : Decoder_3_to_8
@@ -73,7 +73,7 @@ begin
             EN => '1',
             Y => reg_en_out );
     
-    Reg_0 : Reg  -- Read only register with the initial value of 0000
+    Reg_0 : Reg_4_B  -- Read only register with the initial value of 0000
         Port map ( 
             D => Value_In,
             EN => '0',
@@ -81,7 +81,7 @@ begin
             Clk => Clk,
             Q => Q0);
     
-    Reg_1 : Reg
+    Reg_1 : Reg_4_B
        Port map ( 
             D => Value_In,
             EN => reg_en_out(1),
@@ -89,7 +89,7 @@ begin
             Clk => Clk,
             Q => Q1);
                         
-     Reg_2 : Reg
+     Reg_2 : Reg_4_B
         Port map ( 
             D => Value_In,
             EN => reg_en_out(2),
@@ -97,7 +97,7 @@ begin
             Clk => Clk,
             Q => Q2);
             
-     Reg_3 : Reg
+     Reg_3 : Reg_4_B
         Port map ( 
             D => Value_In,
             EN => reg_en_out(3),
@@ -105,7 +105,7 @@ begin
             Clk => Clk,
             Q => Q3);    
             
-     Reg_4 : Reg
+     Reg_4 : Reg_4_B
         Port map ( 
             D => Value_In,
             EN => reg_en_out(4),
@@ -113,7 +113,7 @@ begin
             Clk => Clk,
             Q => Q4); 
                         
-    Reg_5 : Reg
+    Reg_5 : Reg_4_B
         Port map ( 
             D => Value_In,
             EN => reg_en_out(5),
@@ -121,7 +121,7 @@ begin
             Clk => Clk,
             Q => Q5); 
                                     
-    Reg_6 : Reg
+    Reg_6 : Reg_4_B
         Port map ( 
             D => Value_In,
             EN => reg_en_out(6),
@@ -129,7 +129,7 @@ begin
             Clk => Clk,
             Q => Q6); 
             
-    Reg_7 : Reg
+    Reg_7 : Reg_4_B
         Port map ( 
             D => Value_In,
             EN => reg_en_out(7),

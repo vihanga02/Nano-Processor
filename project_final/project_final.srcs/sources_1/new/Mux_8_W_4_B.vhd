@@ -40,6 +40,7 @@ entity Mux_8_W_4_B is
            A6_in : in STD_LOGIC_VECTOR (3 downto 0);
            A7_in : in STD_LOGIC_VECTOR (3 downto 0);
            A8_in : in STD_LOGIC_VECTOR (3 downto 0);
+           EN : in STD_LOGIC;
            C_out : out STD_LOGIC_VECTOR (3 downto 0);
            S0_in : in STD_LOGIC;
            S1_in : in STD_LOGIC;
@@ -52,6 +53,7 @@ component Mux_2_W_4_B
     Port ( A_in : in STD_LOGIC_VECTOR (3 downto 0);
            B_in : in STD_LOGIC_VECTOR (3 downto 0);
            S_in : in STD_LOGIC;
+           EN : in STD_LOGIC;
            C_out : out STD_LOGIC_VECTOR (3 downto 0));
 end component; 
 
@@ -64,6 +66,7 @@ begin
             A_in => A1_in,
             B_in => A2_in,
             S_in => S0_in,
+            EN => EN,
             C_out => Mux_2_way_out_1);
     
     Mux2_2 : Mux_2_W_4_B
@@ -71,6 +74,7 @@ begin
             A_in => A3_in,
             B_in => A4_in,
             S_in => S0_in,
+            EN => EN,
             C_out => Mux_2_way_out_2);
     
     Mux2_3 : Mux_2_W_4_B
@@ -78,6 +82,7 @@ begin
             A_in => A5_in,
             B_in => A6_in,
             S_in => S0_in,
+            EN => EN,
             C_out => Mux_2_way_out_3);
     
     Mux2_4 : Mux_2_W_4_B
@@ -85,6 +90,7 @@ begin
             A_in => A7_in,
             B_in => A8_in,
             S_in => S0_in,
+            EN => EN,
             C_out => Mux_2_way_out_4);
 
     Mux2_5 : Mux_2_W_4_B
@@ -92,6 +98,7 @@ begin
             A_in => Mux_2_way_out_1,
             B_in => Mux_2_way_out_2,
             S_in => S1_in,
+            EN => EN,
             C_out => Mux_2_way_out_5);
     
     Mux2_6 : Mux_2_W_4_B
@@ -99,6 +106,7 @@ begin
             A_in => Mux_2_way_out_3,
             B_in => Mux_2_way_out_4,
             S_in => S1_in,
+            EN => EN,
             C_out => Mux_2_way_out_6);
     
     Mux2_7 : Mux_2_W_4_B
@@ -106,6 +114,7 @@ begin
             A_in => Mux_2_way_out_5,
             B_in => Mux_2_way_out_6,
             S_in => S2_in,
+            EN => EN,
             C_out => C_out);  
 
 end Behavioral;

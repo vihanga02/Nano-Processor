@@ -28,12 +28,7 @@ set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.2 [current_project]
 set_property ip_output_repo /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_vhdl -library xil_defaultlib {
-  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_4/muthumala.srcs/sources_1/new/Decoder_2_TO_4.vhd
-  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_4/muthumala.srcs/sources_1/new/Decoder_3_TO_8.vhd
-  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_7/muthumala.srcs/sources_1/new/Reg.vhd
-  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Register_Bank.vhd
-}
+read_vhdl -library xil_defaultlib /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Mux_2_W_2_B.vhd
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
@@ -45,12 +40,12 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]
 
-synth_design -top Register_Bank -part xc7a35tcpg236-1
+synth_design -top Mux_2_W_3_B -part xc7a35tcpg236-1
 
 
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef Register_Bank.dcp
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file Register_Bank_utilization_synth.rpt -pb Register_Bank_utilization_synth.pb"
+write_checkpoint -force -noxdef Mux_2_W_3_B.dcp
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file Mux_2_W_3_B_utilization_synth.rpt -pb Mux_2_W_3_B_utilization_synth.pb"
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

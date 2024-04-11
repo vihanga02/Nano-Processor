@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 04/04/2024 11:55:27 AM
+-- Create Date: 04/11/2024 11:46:21 AM
 -- Design Name: 
--- Module Name: Program_Counter - Behavioral
+-- Module Name: Reg_3_B - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,30 +31,27 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity Program_Counter is
-   Port ( Counter_IN : in STD_LOGIC_VECTOR (2 downto 0);
-          Reset : in STD_LOGIC;
+entity Reg_3_B is
+    Port ( D : in STD_LOGIC_VECTOR (2 downto 0);
+          En : in STD_LOGIC;
           Clk : in STD_LOGIC;
-          Counter_Out : out STD_LOGIC_VECTOR (2 downto 0));
-end Program_Counter;
+          Reset : in STD_LOGIC;
+          Q : out STD_LOGIC_VECTOR (2 downto 0));
+end Reg_3_B;
 
-architecture Behavioral of Program_Counter is
-
-component Reg_3_B
- Port ( D : in STD_LOGIC_VECTOR (2 downto 0);
-        En : in STD_LOGIC;
-        Clk : in STD_LOGIC;
-        Reset : in STD_LOGIC;
-        Q : out STD_LOGIC_VECTOR (2 downto 0));
- end component;
+architecture Behavioral of Reg_3_B is
 
 begin
-    Reg_0 : Reg_3_B  
-        Port map ( 
-            D => Counter_IN,
-            EN => '1',
-            Reset => Reset,
-            Clk => Clk,
-            Q => Counter_Out);    
+
+process (Clk, Reset) begin
+    if (Reset = '1') then
+        Q <= "000"; -- reset the register asynchronously
+    else if (rising_edge(Clk)) then -- respond when clock rises
+        if En = '1' then -- Enable should be set
+            Q <= D;
+        end if;
+    end if;
+    end if;
+end process;
 
 end Behavioral;

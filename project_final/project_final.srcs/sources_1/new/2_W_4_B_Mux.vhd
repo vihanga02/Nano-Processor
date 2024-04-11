@@ -32,11 +32,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity Mux_2_W_4_B is
-    Port ( S : in STD_LOGIC;
-           D0 : in STD_LOGIC_VECTOR (3 downto 0);
-           D1 : in STD_LOGIC_VECTOR (3 downto 0);
+    Port ( S_in : in STD_LOGIC;
+           A_in : in STD_LOGIC_VECTOR (3 downto 0);
+           B_in : in STD_LOGIC_VECTOR (3 downto 0);
            EN : in STD_LOGIC;
-           Y : out STD_LOGIC_VECTOR (3 downto 0));
+           C_out : out STD_LOGIC_VECTOR (3 downto 0));
 end Mux_2_W_4_B;
 
 architecture Behavioral of Mux_2_W_4_B is
@@ -45,13 +45,13 @@ signal d_out: STD_LOGIC_VECTOR(3 downto 0);
 
 begin
 
-process(S, D0, D1, EN)
+process(S_in, A_in, B_in, EN)
     begin
         if (EN = '1') then
-            if (S = '0') then
-                Y <= D0;
+            if (S_in = '0') then
+                C_out <= A_in;
             else
-                Y <= D1;
+                C_out <= B_in;
             end if;
         end if;
     end process;
