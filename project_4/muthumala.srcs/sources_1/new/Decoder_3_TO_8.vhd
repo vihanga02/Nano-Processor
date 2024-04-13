@@ -44,6 +44,7 @@ architecture Behavioral of Decoder_3_TO_8 is
     EN: in STD_LOGIC;
     Y: out STD_LOGIC_VECTOR );
  end component;
+ 
     signal I0,I1 : STD_LOGIC_VECTOR (1 downto 0);
     signal Y0,Y1 : STD_LOGIC_VECTOR (3 downto 0);
     signal en0,en1, I2 : STD_LOGIC;

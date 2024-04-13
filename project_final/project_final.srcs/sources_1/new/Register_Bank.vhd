@@ -64,12 +64,11 @@ component Decoder_3_to_8
  end component;
  
  signal reg_en_out : std_logic_vector (7 downto 0);
- signal reg_en_in : std_logic_vector(2 downto 0);
 
 begin
     Decode_3_to_8_0 : Decoder_3_to_8
         port map(
-            I => reg_en_in,
+            I => Reg_En,
             EN => '1',
             Y => reg_en_out );
     
