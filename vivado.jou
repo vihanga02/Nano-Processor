@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Mon Apr 15 11:15:10 2024
+# Process ID: 53211
+# Current directory: /home/vihangamuthumala/Documents/my_work/Nano-Processor
+# Command line: vivado
+# Log file: /home/vihangamuthumala/Documents/my_work/Nano-Processor/vivado.log
+# Journal file: /home/vihangamuthumala/Documents/my_work/Nano-Processor/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.xpr
+update_compile_order -fileset sources_1
