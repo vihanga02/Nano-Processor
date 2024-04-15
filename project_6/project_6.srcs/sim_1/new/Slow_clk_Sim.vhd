@@ -31,11 +31,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity Slow_clk_Sim is
+entity TB_Slow_clk is
 --  Port ( );
-end Slow_clk_Sim;
+end TB_Slow_clk;
 
-architecture Behavioral of Slow_clk_Sim is
+architecture Behavioral of TB_Slow_clk is
 
 component Slow_Clk is
     Port ( Clk_in : in STD_LOGIC;

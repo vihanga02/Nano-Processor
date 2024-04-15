@@ -36,14 +36,17 @@ entity TB_DECODER_2_TO_4 is
 end TB_DECODER_2_TO_4;
 
 architecture Behavioral of TB_DECODER_2_TO_4 is
+
 COMPONENT DECODER_2_TO_4
     Port ( I : in STD_LOGIC_VECTOR (1 downto 0);
            EN : in STD_LOGIC;
            Y : out STD_LOGIC_VECTOR (3 downto 0));
 END COMPONENT;
+
     SIGNAL i : STD_LOGIC_VECTOR (1 downto 0);
     SIGNAL en : STD_LOGIC;
     SIGNAL y : STD_LOGIC_VECTOR (3 downto 0);
+    
 begin
  UTT: DECODER_2_TO_4 PORT MAP(
     I => i,

@@ -54,7 +54,7 @@ architecture Behavioral of Add_Sub_Unit is
    end component;
    
    SIGNAL FA0_C, FA1_C, FA2_C, FA3_C  : std_logic;
-   SIGNAL S0,S1,S2,S3:std_logic;
+   SIGNAL SO : std_logic_vector (3 downto 0);
    SIGNAL carry:std_logic;
    SIGNAL B00:std_logic:=(B(0) XOR K);
    SIGNAL B11:std_logic:=(B(1)XOR K);
@@ -62,19 +62,25 @@ architecture Behavioral of Add_Sub_Unit is
    SIGNAL B33:std_logic:=(B(3) XOR K);
    
 begin
-    FA_0 : FA
+    B00 <= (B(0) XOR K);
+    B11 <= (B(1) XOR K);
+    B22 <= (B(2) XOR K);
+    B33 <= (B(3) XOR K);
+   
+  FA_0 : FA
    port map (
        A => A(0),
        B => B00,
-       C_in => C_in, -- Set to ground
-       S => S(0),
+       C_in => k, -- Set to ground
+       S => SO(0),
        C_Out => FA0_C);
+       
   FA_1 : FA
     port map (
        A => A(1),
        B => B11,
        C_in => FA0_C,
-       S => S(1),
+       S => SO(1),
        C_Out => FA1_C);
 
    FA_2 : FA
@@ -82,26 +88,21 @@ begin
        A => A(2),
        B => B22,
        C_in => FA1_C,
-       S => S(2),
+       S => SO(2),
        C_Out => FA2_C);
+       
    FA_3 : FA
    port map (
        A => A(3),
        B => B33,
        C_in => FA2_C,
-       S => S(3),
+       S => SO(3),
        C_Out => carry);
     
     overFlow <= carry XOR FA2_C;
     C_outT <= carry;
+    S <= SO;
   
-    PROCESS 
-      BEGIN
-        if (S3 ='0' and S2='0' and S1='0' and S0='0') then
-            Zero<= '1';
-        else
-            Zero <= '0';
-        end if;
-     end process;
+    Zero <= (NOT SO(0)) AND (NOT SO(1)) AND (NOT SO(2)) AND (NOT SO(3)); 
 
 end Behavioral;

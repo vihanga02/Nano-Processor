@@ -31,11 +31,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity HA_Sim is
+entity TB_HA is
 --  Port ( );
-end HA_Sim;
+end TB_HA;
 
-architecture Behavioral of HA_Sim is
+architecture Behavioral of TB_HA is
 
  COMPONENT HA
     PORT( A, B : IN STD_LOGIC;

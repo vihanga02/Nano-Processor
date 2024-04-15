@@ -31,11 +31,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity FA_sim is
+entity TB_FA is
 --  Port ( );
-end FA_sim;
+end TB_FA;
 
-architecture Behavioral of FA_sim is
+architecture Behavioral of TB_FA is
  COMPONENT FA
     PORT( A, B, C_in : IN STD_LOGIC;
         C_out, S : OUT STD_LOGIC);
