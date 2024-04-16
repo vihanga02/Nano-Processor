@@ -2,12 +2,12 @@
 # Webtalk v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Mon Apr 15 10:18:22 2024
-# Process ID: 20999
+# Start of session at: Tue Apr 16 08:07:35 2024
+# Process ID: 123080
 # Current directory: /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.sim/sim_1/behav/xsim
-# Command line: wbtcv -mode batch -source /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.sim/sim_1/behav/xsim/xsim.dir/TB_Instruction_Decoder_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv -mode batch -source /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.sim/sim_1/behav/xsim/xsim.dir/TB_Mux_8_W_4_B_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.sim/sim_1/behav/xsim/webtalk.jou
 #-----------------------------------------------------------
-source /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.sim/sim_1/behav/xsim/xsim.dir/TB_Instruction_Decoder_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Mon Apr 15 10:18:23 2024...
+source /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.sim/sim_1/behav/xsim/xsim.dir/TB_Mux_8_W_4_B_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Apr 16 08:07:37 2024...
