@@ -42,14 +42,14 @@ component Register_Bank
            Clk : in STD_LOGIC;
            Reg_En : in STD_LOGIC_VECTOR (2 downto 0);
            Reset : in STD_LOGIC;
-           Q0 : out STD_LOGIC_VECTOR (3 downto 0);
-           Q1 : out STD_LOGIC_VECTOR (3 downto 0);
-           Q2 : out STD_LOGIC_VECTOR (3 downto 0);
-           Q3 : out STD_LOGIC_VECTOR (3 downto 0);
-           Q4 : out STD_LOGIC_VECTOR (3 downto 0);
-           Q5 : out STD_LOGIC_VECTOR (3 downto 0);
-           Q6 : out STD_LOGIC_VECTOR (3 downto 0);
-           Q7 : out STD_LOGIC_VECTOR (3 downto 0)); 
+           R0 : out STD_LOGIC_VECTOR (3 downto 0);
+           R1 : out STD_LOGIC_VECTOR (3 downto 0);
+           R2 : out STD_LOGIC_VECTOR (3 downto 0);
+           R3 : out STD_LOGIC_VECTOR (3 downto 0);
+           R4 : out STD_LOGIC_VECTOR (3 downto 0);
+           R5 : out STD_LOGIC_VECTOR (3 downto 0);
+           R6 : out STD_LOGIC_VECTOR (3 downto 0);
+           R7 : out STD_LOGIC_VECTOR (3 downto 0)); 
 END COMPONENT;
 
 signal input : STD_LOGIC_VECTOR(3 downto 0);
@@ -65,14 +65,14 @@ UUT: Register_Bank
        Clk => clk,
        Reg_En => selecter,
        Reset => reset,
-       Q0 => Q0,
-       Q1 => Q1,
-       Q2 => Q2,
-       Q3 => Q3,
-       Q4 => Q4,
-       Q5 => Q5,
-       Q6 => Q6,
-       Q7 => Q7 );
+       R0 => Q0,
+       R1 => Q1,
+       R2 => Q2,
+       R3 => Q3,
+       R4 => Q4,
+       R5 => Q5,
+       R6 => Q6,
+       R7 => Q7 );
        
   process 
   begin

@@ -36,7 +36,7 @@ entity Reg_4_B is
            En : in STD_LOGIC;
            Clk : in STD_LOGIC;
            Reset : in STD_LOGIC;
-           Q : out STD_LOGIC_VECTOR (3 downto 0));
+           R : out STD_LOGIC_VECTOR (3 downto 0));
 end Reg_4_B;
 
 architecture Behavioral of Reg_4_B is
@@ -44,10 +44,10 @@ architecture Behavioral of Reg_4_B is
 begin
 process (Clk, Reset) begin
     if (Reset = '1') then
-        Q <= "0000"; -- reset the register asynchronously
+        R <= "0000"; -- reset the register asynchronously
     else if (rising_edge(Clk)) then -- respond when clock rises
         if En = '1' then -- Enable should be set
-            Q <= D;
+            R <= D;
         end if;
     end if;
     end if;

@@ -69,13 +69,21 @@ signal all_zeroes : STD_LOGIC;
 begin
  
  all_zeroes <= NOT(Check_For_Jump(0)) AND NOT(Check_For_Jump(1)) AND NOT(Check_For_Jump(2)) AND NOT(Check_For_Jump(3));
+ 
  Register_Enable <= Instruction_bus (9 downto 7);
+ 
  Load_Select <= Instruction_bus(11) AND NOT(Instruction_bus(10));
+ 
  Immediate_Value <= Instruction_bus(3 downto 0);
+ 
  Register_Select_0 <= Instruction_bus(9 downto 7);
+ 
  Register_Select_1 <= Instruction_bus(6 downto 4);
+ 
  A_S_Select <= NOT(Instruction_bus(11)) AND Instruction_bus(10);
+ 
  Jump_Flag <= Instruction_bus(11) AND Instruction_bus(10) AND all_zeroes;
+ 
  Jump_Address <= Instruction_bus(2 downto 0);
  
 -- Decode_2_to_4_0 : Decoder_2_to_4

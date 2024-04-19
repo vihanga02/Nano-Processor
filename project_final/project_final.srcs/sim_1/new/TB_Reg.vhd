@@ -42,7 +42,7 @@ component Reg_4_B is
            En : in STD_LOGIC;
            Clk : in STD_LOGIC;
            Reset : in STD_LOGIC;
-           Q : out STD_LOGIC_VECTOR (3 downto 0));
+           R : out STD_LOGIC_VECTOR (3 downto 0));
 end component;
 
 SIGNAL Clk, En, Rst : STD_LOGIC;
@@ -56,7 +56,7 @@ UUT : Reg_4_B PORT MAP (
         Reset => Rst,
         En => En,
         D => D,
-        Q => Q
+        R => Q
     ); 
     
     

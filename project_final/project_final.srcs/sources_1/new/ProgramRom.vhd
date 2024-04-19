@@ -38,7 +38,7 @@ end Program_Rom;
 
 architecture Behavioral of Program_Rom is
 
-type rom_type is array (0 to 7) of std_logic_vector(11 downto 0); 
+type rom_type is array (0 to 6) of std_logic_vector(11 downto 0); 
     signal program_ROM : rom_type := (
         "100010001010", -- MOVI R1,10
         "100100000001", -- MOVI R2,1
