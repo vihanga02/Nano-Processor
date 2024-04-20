@@ -39,9 +39,9 @@ architecture Behavioral of TB_Adder_3_bit is
 
 component Adder_3_bit
  Port ( A : in STD_LOGIC_VECTOR (2 downto 0);
-          C_in : in STD_LOGIC;
-          S : out STD_LOGIC_VECTOR (2 downto 0);
-          C_out : out STD_LOGIC);
+      C_in : in STD_LOGIC;
+      S : out STD_LOGIC_VECTOR (2 downto 0);
+      C_out : out STD_LOGIC);
 end component;
 
 signal A,S:std_logic_vector(2 downto 0);

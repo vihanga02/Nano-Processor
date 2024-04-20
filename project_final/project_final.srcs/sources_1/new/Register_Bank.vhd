@@ -64,6 +64,7 @@ component Decoder_3_to_8
  end component;
  
  signal reg_en_out : std_logic_vector (7 downto 0);
+ signal not_reg_0 : std_logic;
 
 begin
     Decode_3_to_8_0 : Decoder_3_to_8
@@ -128,10 +129,12 @@ begin
             Clk => Clk,
             R => R6); 
             
+    not_reg_0 <= NOT reg_en_out(0);
+    
     Reg_7 : Reg_4_B
         Port map ( 
             D => Value_In,
-            EN => reg_en_out(7),
+            EN => not_reg_0,
             Reset => Reset,
             Clk => Clk,
             R => R7);                            

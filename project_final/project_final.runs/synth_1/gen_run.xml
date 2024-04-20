@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1713381699">
-  <File Type="PA-TCL" Name="Main_Process.tcl"/>
-  <File Type="REPORTS-TCL" Name="Main_Process_reports.tcl"/>
-  <File Type="RDS-RDS" Name="Main_Process.vds"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1713591889">
+  <File Type="VDS-TIMING-PB" Name="Main_Process_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Main_Process_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="Main_Process.dcp"/>
   <File Type="RDS-UTIL-PB" Name="Main_Process_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="Main_Process_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="Main_Process_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="Main_Process.vds"/>
+  <File Type="REPORTS-TCL" Name="Main_Process_reports.tcl"/>
+  <File Type="PA-TCL" Name="Main_Process.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../project_4/muthumala.srcs/sources_1/new/Decoder_2_TO_4.vhd">
@@ -123,6 +126,12 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/Main_Process.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Adder_3_B.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>

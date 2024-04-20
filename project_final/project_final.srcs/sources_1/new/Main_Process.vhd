@@ -32,7 +32,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity Main_Process is
-    Port (--count : out std_logic_vector(2 downto 0);
+    Port (cout : out std_logic_vector(3 downto 0);
+        -- cout1 : out std_logic_vector(3 downto 0);
         Clk_In : in STD_LOGIC;
         Reset : in STD_LOGIC;
         Overflow_Flag : out STD_LOGIC;
@@ -158,13 +159,13 @@ signal mux_0_out, mux_1_out : STD_LOGIC_VECTOR (3 downto 0);
 signal add_sub_out : STD_LOGIC_VECTOR( 3 downto 0);
 signal c_out_add_sub : STD_LOGIC;
 
-signal adder_3_bit_out, program_counter_out, next_address : STD_LOGIC_VECTOR (2 downto 0);
+signal adder_3_bit_out, next_address : STD_LOGIC_VECTOR (2 downto 0);
 signal adder_3_bit_carry_out : STD_LOGIC;
 
 signal memory_select : STD_LOGIC_VECTOR (2 downto 0);
 
 begin 
-Ins_decoder : Instruction_decoder
+Instruction_decoder_0 : Instruction_decoder
     port map (
          Instruction_Bus => Instruction_Bus,
          Check_For_Jump => Check_for_jump,
@@ -203,9 +204,9 @@ Mux_8_W_4_b_0 : Mux_8_W_4_B
            A6 => Data_bus_6,
            A7 => Data_bus_7,
            C_OUT => mux_0_out,
-           S => Register_Select_0);
+           S => Register_Select_1);
 
-Check_For_Jump <= mux_0_out;
+Check_For_Jump <= mux_1_out;
 
 Mux_8_W_4_b_1 : Mux_8_W_4_B
     port map (
@@ -218,7 +219,7 @@ Mux_8_W_4_b_1 : Mux_8_W_4_B
            A6 => Data_bus_6,
            A7 => Data_bus_7,
            C_OUT => mux_1_out,
-           S => Register_Select_1);  
+           S => Register_Select_0);  
            
 Add_Sub : Add_Sub_Unit
     port map (
@@ -241,7 +242,7 @@ Mux_2_W_4_B_0 : Mux_2_W_4_B
            
 Adder_3_b : Adder_3_bit
     port map (
-           A => program_counter_out,
+           A => memory_select,
            C_in => '0',
            S => adder_3_bit_out,
            C_out => adder_3_bit_carry_out);
@@ -254,7 +255,6 @@ Mux_2_w_3_b_0 : Mux_2_W_3_B
            C_out => next_address);
          
    
-           
 Program_Counter_0 : Program_counter
     port map (
           Counter_IN => next_address,
@@ -278,5 +278,6 @@ Seg_display : LUT_16_7
         data => seg_data);
         
 anode <= "1110";
---count <= next_address; 
+cout <= Data_bus_7; 
+--cout1 <= Check_for_jump;
 end Behavioral;

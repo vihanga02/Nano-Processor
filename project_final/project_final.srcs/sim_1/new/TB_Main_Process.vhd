@@ -39,7 +39,8 @@ architecture Behavioral of TB_Main_Process is
 
 component Main_Process is
     Port (
-        --count : out std_logic_vector (2 downto 0);
+        cout : out std_logic_vector (3 downto 0);
+        --cout1 : out std_logic_vector (3 downto 0);
         Clk_In : in STD_LOGIC;
         Reset : in STD_LOGIC;
         Overflow_Flag : out STD_LOGIC;
@@ -51,13 +52,14 @@ end component;
 
 SIGNAL Rst, Clk, Ovf, Zeroes : STD_LOGIC;
 SIGNAL  Anode : STD_LOGIC_VECTOR(3 downto 0);
-SIGNAL  count : STD_LOGIC_VECTOR(2 downto 0);
+SIGNAL  count : STD_LOGIC_VECTOR(3 downto 0);
 SIGNAL Seg_data : STD_LOGIC_VECTOR(6 downto 0);
 
 begin
     UTT : Main_Process
         port map (
-            --count => count,
+            cout => count,
+            -- cout1 => count1,
             clk_In => clk,
             Reset => rst,
             Overflow_Flag => ovf,
@@ -69,17 +71,17 @@ begin
     clk_process : process -- clock processor
         begin
             Clk <= '0';
-            wait for 20ns;
+            wait for 1ns;
             
             Clk <= '1';
-            wait for 20ns;
+            wait for 1ns;
     end process;
     
     process 
         begin
             
             Rst <= '1';
-            wait for 40ns;
+            wait for 50ns;
             Rst <= '0';
             wait; --wait forever
         

@@ -16,7 +16,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param synth.incrementalSynthesisCache ./.Xil/Vivado-756360-vihangamuthumala-HP-Laptop-15s-eq1xxx/incrSyn
+set_param synth.incrementalSynthesisCache ./.Xil/Vivado-35839-vihangamuthumala-HP-Laptop-15s-eq1xxx/incrSyn
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tcpg236-1
@@ -52,6 +52,7 @@ read_vhdl -library xil_defaultlib {
   /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_8/project_8_saved.srcs/sources_1/new/LUT_16_7.vhd
   /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_6/project_6.srcs/sources_1/new/Slow_Clk.vhd
   /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Main_Process.vhd
+  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Adder_3_B.vhd
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
