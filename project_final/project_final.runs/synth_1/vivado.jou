@@ -2,8 +2,8 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Sat Apr 20 11:14:51 2024
-# Process ID: 135319
+# Start of session at: Mon Apr 22 16:21:36 2024
+# Process ID: 114886
 # Current directory: /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.runs/synth_1
 # Command line: vivado -log Main_Process.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Main_Process.tcl
 # Log file: /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.runs/synth_1/Main_Process.vds

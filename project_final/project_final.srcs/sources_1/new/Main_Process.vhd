@@ -280,4 +280,5 @@ Seg_display : LUT_16_7
 anode <= "1110";
 cout <= Data_bus_7; 
 --cout1 <= Check_for_jump;
+
 end Behavioral;

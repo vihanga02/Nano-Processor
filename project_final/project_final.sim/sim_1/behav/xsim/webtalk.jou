@@ -2,11 +2,11 @@
 # Webtalk v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Fri Apr 19 23:23:38 2024
-# Process ID: 451457
+# Start of session at: Tue Apr 23 10:32:25 2024
+# Process ID: 190814
 # Current directory: /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.sim/sim_1/behav/xsim
-# Command line: wbtcv -mode batch -source /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.sim/sim_1/behav/xsim/xsim.dir/TB_Main_Process_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv -mode batch -source /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.sim/sim_1/behav/xsim/xsim.dir/TB_Comparator_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.sim/sim_1/behav/xsim/webtalk.jou
 #-----------------------------------------------------------
-source /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.sim/sim_1/behav/xsim/xsim.dir/TB_Main_Process_behav/webtalk/xsim_webtalk.tcl -notrace
+source /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.sim/sim_1/behav/xsim/xsim.dir/TB_Comparator_behav/webtalk/xsim_webtalk.tcl -notrace

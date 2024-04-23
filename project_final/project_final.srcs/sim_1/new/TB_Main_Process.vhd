@@ -52,13 +52,13 @@ end component;
 
 SIGNAL Rst, Clk, Ovf, Zeroes : STD_LOGIC;
 SIGNAL  Anode : STD_LOGIC_VECTOR(3 downto 0);
-SIGNAL  count : STD_LOGIC_VECTOR(3 downto 0);
+SIGNAL  cout : STD_LOGIC_VECTOR(3 downto 0);
 SIGNAL Seg_data : STD_LOGIC_VECTOR(6 downto 0);
 
 begin
     UTT : Main_Process
         port map (
-            cout => count,
+            cout => cout,
             -- cout1 => count1,
             clk_In => clk,
             Reset => rst,

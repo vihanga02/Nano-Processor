@@ -41,19 +41,29 @@ end Mux_2_W_4_B;
 
 architecture Behavioral of Mux_2_W_4_B is
 
-signal d_out: STD_LOGIC_VECTOR(3 downto 0);
+component Tri_State_Buffer_4_B is
+    Port ( data_in : in STD_LOGIC_VECTOR (3 downto 0);
+          enable : in STD_LOGIC;
+          data_out: out STD_LOGIC_VECTOR (3 downto 0));
+end component;
+
+signal s,s_not: STD_LOGIC;
 
 begin
 
-process(S_in, A_in, B_in, EN)
-    begin
-        if (EN = '1') then
-            if (S_in = '0') then
-                C_out <= A_in;
-            else
-                C_out <= B_in;
-            end if;
-        end if;
-    end process;
+s <= s_in;
+s_not <= NOT s_in;
 
+buff_0 : Tri_State_Buffer_4_B
+    port map (
+        data_in => A_in,
+        enable => s_not,
+        data_out => c_out);
+        
+buff_1 : Tri_State_Buffer_4_B
+    port map (
+        data_in => B_in,
+        enable => s,
+        data_out => c_out);
+       
 end Behavioral;

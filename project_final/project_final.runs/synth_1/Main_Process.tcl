@@ -16,9 +16,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param synth.incrementalSynthesisCache ./.Xil/Vivado-35839-vihangamuthumala-HP-Laptop-15s-eq1xxx/incrSyn
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -32,27 +29,25 @@ set_property board_part digilentinc.com:basys3:part0:1.2 [current_project]
 set_property ip_output_repo /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
-  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_4/muthumala.srcs/sources_1/new/Decoder_2_TO_4.vhd
-  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_4/muthumala.srcs/sources_1/new/Decoder_3_TO_8.vhd
-  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_7/muthumala.srcs/sources_1/new/Reg.vhd
-  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Register_Bank.vhd
-  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Mux_2_W_2_B.vhd
-  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Reg_3_B.vhd
-  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Program_Counter.vhd
-  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_3/LAB_3/LAB_3.srcs/sources_1/new/FA.vhd
-  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_3/LAB_3/LAB_3.srcs/sources_1/new/HA.vhd
+  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/2_W_4_B_Mux.vhd
   /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Add_Sub_Unit.vhd
   /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Adder_4_bit.vhd
-  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/2_W_4_B_Mux.vhd
+  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/imports/Nano-Processor/project_4/muthumala.srcs/sources_1/new/Decoder_3_TO_8.vhd
+  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/imports/Nano-Processor/project_3/LAB_3/LAB_3.srcs/sources_1/new/FA.vhd
+  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/imports/Nano-Processor/project_3/LAB_3/LAB_3.srcs/sources_1/new/HA.vhd
+  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Instruction_Decoder.vhd
+  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/imports/Nano-Processor/project_8/project_8_saved.srcs/sources_1/new/LUT_16_7.vhd
+  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Mux_2_W_2_B.vhd
   /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Mux_8_W_4_B.vhd
+  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/ProgramRom.vhd
+  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Program_Counter.vhd
+  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/imports/Nano-Processor/project_7/muthumala.srcs/sources_1/new/Reg.vhd
+  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Reg_3_B.vhd
+  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Register_Bank.vhd
+  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/imports/Nano-Processor/project_6/project_6.srcs/sources_1/new/Slow_Clk.vhd
   /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Tri_State_Buffer.vhd
   /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Tri_State_Buffer_4_B.vhd
-  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Instruction_Decoder.vhd
-  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/ProgramRom.vhd
-  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_8/project_8_saved.srcs/sources_1/new/LUT_16_7.vhd
-  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_6/project_6.srcs/sources_1/new/Slow_Clk.vhd
   /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Main_Process.vhd
-  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Adder_3_B.vhd
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
