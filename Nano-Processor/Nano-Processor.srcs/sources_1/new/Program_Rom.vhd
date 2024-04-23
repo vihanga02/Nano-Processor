@@ -26,7 +26,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 -- arithmetic functions with Signed or Unsigned values
 use IEEE.NUMERIC_STD.ALL;
 
--- Uncomment the following library declaration if instantiating
+-- Uncomment the following li=brary declaration if instantiating
 -- any Xilinx leaf cells in this code.
 --library UNISIM;
 --use UNISIM.VComponents.all;
@@ -48,7 +48,7 @@ type rom_type is array (0 to 7) of std_logic_vector(11 downto 0);
         "000010110000",
         "001110010000",
         "000000000000",
-        "000000000000"
+        "110000000111"
         );
 
 begin
