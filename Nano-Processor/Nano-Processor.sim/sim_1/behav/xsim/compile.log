@@ -1,0 +1,58 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Decode_2_TO_4.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Decode_2_TO_4
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Decoder_3_TO_8.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Decoder_3_TO_8
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sim_1/new/TB_Decode_3_To_8.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TB_Decode_3_To_8
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sim_1/new/TB_Decode_3_To_8.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TB_Decode_3_To_8
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sim_1/new/TB_Decode_3_To_8.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TB_Decode_3_To_8
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Adder_3_B.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Adder_3_B
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/FA.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity FA
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/HA.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity HA
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sim_1/new/TB_Adder_3_B.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TB_Adder_3_B
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Instruction_Decoder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Instruction_Decoder
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sim_1/new/TB_Instruction_Decoder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TB_Instruction_Decoder
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Mux_2_W_4_B.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Mux_2_W_4_B
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Tri_State_Buffer_4_B.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Tri_State_Buffer_4_B
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sim_1/new/TB_Mux_2_W_4_B.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TB_Mux_2_W_4_B
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sim_1/new/TB_Mux_2_W_4_B.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TB_Mux_2_W_4_B
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Add_Sub_Unit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Add_Sub_Unit
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/LUT_16_7.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity LUT_16_7
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Main_Process.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Main_Process
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Mux_2_W_3_B.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Mux_2_W_3_B
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Mux_8_W_4_B.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Mux_8_W_4_B
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Program_Counter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Program_Counter
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Program_Rom.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Program_Rom
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Reg_3_B.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Reg_3_B
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Reg_4_B.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Reg_4_B
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Register_Bank.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Register_Bank
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Slow_Clk.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Slow_Clk
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Tri_State_Buffer_3_B.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Tri_State_Buffer_3_B
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sim_1/new/TB_Main_Process.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TB_Main_Process
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sim_1/new/TB_Main_Process.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TB_Main_Process
