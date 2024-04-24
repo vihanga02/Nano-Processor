@@ -49,16 +49,19 @@ component Instruction_Decoder is
              A_S_Select : out STD_LOGIC;
              Jump_Flag : out STD_LOGIC;
              Jump_Address : out STD_LOGIC_VECTOR (2 downto 0);
-             Comparator_En : out STD_LOGIC);
+             Comparator_En : out STD_LOGIC;
+              Bit_Shift_En : out STD_LOGIC;
+              Bit_Shift_with_Dir : out STD_LOGIC_VECTOR (2 downto 0));
 end component;
 
     SIGNAL ins_bus : STD_LOGIC_VECTOR(12 downto 0);
     SIGNAL jmp_check, im_val : STD_LOGIC_VECTOR(3 downto 0);
-    SIGNAL reg_enb, reg_sel_0, reg_sel_1, jmp_addr : STD_LOGIC_VECTOR(2 downto 0);
-    SIGNAL load_sel, add_sub_sel, jmp, Comparator_En : STD_LOGIC;
+    SIGNAL reg_enb, reg_sel_0, reg_sel_1, jmp_addr, B_Shift_with_Dir : STD_LOGIC_VECTOR(2 downto 0);
+    SIGNAL load_sel, add_sub_sel, jmp, Comparator_En, Bit_Shift_En : STD_LOGIC;
     
 begin
-    UUT : Instruction_decoder PORT MAP (
+    UUT : Instruction_decoder 
+    PORT MAP (
         Instruction_Bus => ins_bus,
         Check_For_Jump => jmp_check,
         Register_Enable => reg_enb,
@@ -68,8 +71,9 @@ begin
         Register_Select_1 => reg_sel_1,
         A_S_Select => add_sub_sel,
         Jump_Flag => jmp,
-        Jump_Address => jmp_addr
-    );
+        Jump_Address => jmp_addr,
+        Bit_Shift_En => Bit_Shift_En,
+        Bit_Shift_with_Dir => B_Shift_with_Dir);
     
    --IndexNumber
     --220213D = 11 0101 1100 0011 0101

@@ -63,7 +63,9 @@ component Instruction_Decoder is
              Jump_Address : out STD_LOGIC_VECTOR (2 downto 0);
              Comparator_En : out STD_LOGIC;
              Logical_unit_en : out STD_LOGIC;
-             Logical_Operation_Select : out STD_LOGIC_VECTOR(1 Downto 0));
+             Logical_Operation_Select : out STD_LOGIC_VECTOR(1 Downto 0);
+             Bit_Shift_En : out STD_LOGIC;
+             Bit_Shift_with_Dir : out STD_LOGIC_VECTOR (2 downto 0));
 end component;
 
 component Mux_8_W_4_B is
@@ -167,6 +169,14 @@ component Logical_Unit is
     );
 end component;
 
+component Bit_Shift is
+    Port ( 
+        A : in STD_LOGIC_VECTOR (3 downto 0);
+        B_Shift_with_Dir : in STD_LOGIC_VECTOR (2 downto 0); 
+        En : in STD_LOGIC;
+        A_out : out STD_LOGIC_VECTOR (3 downto 0));
+end component;
+
 signal Instruction_Bus : STD_LOGIC_VECTOR (12 downto 0);
 signal Check_For_Jump : STD_LOGIC_VECTOR (3 downto 0);
 signal Register_Enable : STD_LOGIC_VECTOR (2 downto 0);
@@ -189,9 +199,11 @@ signal adder_3_bit_carry_out : STD_LOGIC;
 
 signal memory_select : STD_LOGIC_VECTOR (2 downto 0);
 
-signal zero, over : STD_LOGIC;
+signal zero, over, bit_Shift_en : STD_LOGIC;
 signal Comparator_En, Logical_unit_en : STD_LOGIC;
 signal Logical_Operation_Select : STD_LOGIC_VECTOR (1 downto 0);
+
+signal B_Shift_with_Dir : STD_LOGIC_VECTOR (2 downto 0);
 
 begin 
 Instruction_decoder_0 : Instruction_decoder
@@ -208,7 +220,9 @@ Instruction_decoder_0 : Instruction_decoder
          Jump_Address => Jump_Address,
          Comparator_En => Comparator_En,
          Logical_Unit_En => Logical_unit_en,
-         Logical_Operation_Select => Logical_Operation_Select);
+         Logical_Operation_Select => Logical_Operation_Select,
+         Bit_Shift_En => bit_Shift_en,
+         Bit_Shift_with_Dir => B_Shift_with_Dir);
          
 Register_Bank_0 : Register_Bank
     port map (
@@ -325,6 +339,12 @@ Logical_unit_0 :  Logical_Unit
            Op_Select => Logical_Operation_Select,
            Out_Result => Log_and_Shift_out);
    
+ Bit_Shift_0 :  Bit_Shift 
+       Port map ( 
+           A => mux_0_out,
+           B_Shift_with_Dir => B_Shift_with_Dir,
+           En => Bit_Shift_En,
+           A_out => Log_and_Shift_out);
         
 Zero_Flag <= zero AND NOT instruction_bus(12) AND NOT instruction_bus(11) AND NOT instruction_bus(10);     
 Overflow_Flag <= over AND NOT instruction_bus(12) AND NOT instruction_bus(11) AND NOT instruction_bus(10);

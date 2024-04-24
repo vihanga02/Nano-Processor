@@ -48,13 +48,14 @@ component Main_Process is
         anode : out STD_LOGIC_VECTOR (3 downto 0);
         Equal : out STD_LOGIC;
         Greater : out STD_LOGIC;
-        Less : out STD_LOGIC
+        Less : out STD_LOGIC;
+        Log_and_Shift_out : out STD_LOGIC_VECTOR (3 downto 0)
     );
 end component;
 
 SIGNAL Rst, Clk, Ovf, Zeroes, less, greater, equal : STD_LOGIC;
 SIGNAL  Anode : STD_LOGIC_VECTOR(3 downto 0);
-SIGNAL  reg_7_out : STD_LOGIC_VECTOR(3 downto 0);
+SIGNAL  reg_7_out, Log_and_Shift_out : STD_LOGIC_VECTOR(3 downto 0);
 SIGNAL Seg_data : STD_LOGIC_VECTOR(6 downto 0);
 
 begin

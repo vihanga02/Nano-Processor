@@ -41,7 +41,7 @@ end Bit_Shift;
 
 architecture Behavioral of Bit_Shift is
  
-component Decode_3_to_8
+component Decoder_3_to_8
    port (
        I : in std_logic_vector (2 downto 0);
        En : in std_logic;
@@ -62,9 +62,9 @@ signal Final_Out : STD_LOGIC_VECTOR (3 downto 0);
 
 begin
 
-Decoder: Decode_3_to_8
+Decoder: Decoder_3_to_8
     port map ( I => B_Shift_with_Dir,
-               En => En ,
+               En => '1',
                Y => Decoder_Out);
                
 Lshift_0 <= A;
