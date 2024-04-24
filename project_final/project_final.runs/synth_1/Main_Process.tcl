@@ -16,6 +16,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -32,11 +33,15 @@ read_vhdl -library xil_defaultlib {
   /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/2_W_4_B_Mux.vhd
   /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Add_Sub_Unit.vhd
   /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Adder_4_bit.vhd
+  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Bit_Shift.vhd
+  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Comparator.vhd
+  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_4/muthumala.srcs/sources_1/new/Decoder_2_TO_4.vhd
   /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/imports/Nano-Processor/project_4/muthumala.srcs/sources_1/new/Decoder_3_TO_8.vhd
   /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/imports/Nano-Processor/project_3/LAB_3/LAB_3.srcs/sources_1/new/FA.vhd
   /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/imports/Nano-Processor/project_3/LAB_3/LAB_3.srcs/sources_1/new/HA.vhd
   /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Instruction_Decoder.vhd
   /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/imports/Nano-Processor/project_8/project_8_saved.srcs/sources_1/new/LUT_16_7.vhd
+  /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Logical_Operations_Unit.vhd
   /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Mux_2_W_2_B.vhd
   /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Mux_8_W_4_B.vhd
   /home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/ProgramRom.vhd
@@ -57,6 +62,9 @@ read_vhdl -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc /home/vihangamuthumala/Documents/my_work/Nano-Processor/3.xdc
+set_property used_in_implementation false [get_files /home/vihangamuthumala/Documents/my_work/Nano-Processor/3.xdc]
+
 set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]
 

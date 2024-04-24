@@ -31,13 +31,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity TB_DECODER_2_TO_4 is
+entity TB_DECODE_2_TO_4 is
 --  Port ( );
-end TB_DECODER_2_TO_4;
+end TB_DECODE_2_TO_4;
 
-architecture Behavioral of TB_DECODER_2_TO_4 is
+architecture Behavioral of TB_DECODE_2_TO_4 is
 
-COMPONENT DECODER_2_TO_4
+COMPONENT DECODE_2_TO_4
     Port ( I : in STD_LOGIC_VECTOR (1 downto 0);
            EN : in STD_LOGIC;
            Y : out STD_LOGIC_VECTOR (3 downto 0));
@@ -48,7 +48,7 @@ END COMPONENT;
     SIGNAL y : STD_LOGIC_VECTOR (3 downto 0);
     
 begin
- UTT: DECODER_2_TO_4 PORT MAP(
+ UTT: DECODE_2_TO_4 PORT MAP(
     I => i,
     EN => en,
     Y => y

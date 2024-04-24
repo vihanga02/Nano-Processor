@@ -1,8 +1,12 @@
 Vivado Simulator 2018.1
 Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
-Running: /opt/Xilinx/Vivado/2018.1/bin/unwrapped/lnx64.o/xelab -wto 44cfa6dd40264a9699380bccba51978d --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot TB_Comparator_behav xil_defaultlib.TB_Comparator -log elaborate.log 
+Running: /opt/Xilinx/Vivado/2018.1/bin/unwrapped/lnx64.o/xelab -wto 44cfa6dd40264a9699380bccba51978d --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot TB_Main_Process_behav xil_defaultlib.TB_Main_Process -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
+WARNING: [VRFC 10-1625] value in initialization depends on signal b [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Add_Sub_Unit.vhd:59]
+WARNING: [VRFC 10-1625] value in initialization depends on signal b [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Add_Sub_Unit.vhd:60]
+WARNING: [VRFC 10-1625] value in initialization depends on signal b [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Add_Sub_Unit.vhd:61]
+WARNING: [VRFC 10-1625] value in initialization depends on signal b [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Add_Sub_Unit.vhd:62]
 WARNING: [VRFC 10-1625] value in initialization depends on signal a [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Comparator.vhd:43]
 WARNING: [VRFC 10-1625] value in initialization depends on signal a [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Comparator.vhd:44]
 WARNING: [VRFC 10-1625] value in initialization depends on signal a [/home/vihangamuthumala/Documents/my_work/Nano-Processor/project_final/project_final.srcs/sources_1/new/Comparator.vhd:45]
@@ -14,6 +18,29 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Instruction_Decoder [instruction_decoder_default]
+Compiling architecture behavioral of entity xil_defaultlib.Decode_2_TO_4 [decode_2_to_4_default]
+Compiling architecture behavioral of entity xil_defaultlib.Decoder_3_TO_8 [decoder_3_to_8_default]
+Compiling architecture behavioral of entity xil_defaultlib.Reg_4_B [reg_4_b_default]
+Compiling architecture behavioral of entity xil_defaultlib.Register_Bank [register_bank_default]
+Compiling architecture behavioral of entity xil_defaultlib.Tri_State_Buffer_4_B [tri_state_buffer_4_b_default]
+Compiling architecture behavioral of entity xil_defaultlib.Mux_2_W_4_B [mux_2_w_4_b_default]
+Compiling architecture behavioral of entity xil_defaultlib.Mux_8_W_4_B [mux_8_w_4_b_default]
+Compiling architecture behavioral of entity xil_defaultlib.HA [ha_default]
+Compiling architecture behavioral of entity xil_defaultlib.FA [fa_default]
+Compiling architecture behavioral of entity xil_defaultlib.Add_Sub_Unit [add_sub_unit_default]
+Compiling architecture behavioral of entity xil_defaultlib.Adder_3_bit [adder_3_bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.Tri_State_Buffer_3_B [tri_state_buffer_3_b_default]
+Compiling architecture behavioral of entity xil_defaultlib.Mux_2_W_3_B [mux_2_w_3_b_default]
+Compiling architecture behavioral of entity xil_defaultlib.Reg_3_B [reg_3_b_default]
+Compiling architecture behavioral of entity xil_defaultlib.Program_Counter [program_counter_default]
+Compiling architecture behavioral of entity xil_defaultlib.Program_Rom [program_rom_default]
+Compiling architecture behavioral of entity xil_defaultlib.Slow_Clk [slow_clk_default]
+Compiling architecture behavioral of entity xil_defaultlib.LUT_16_7 [lut_16_7_default]
 Compiling architecture behavioral of entity xil_defaultlib.Comparator [comparator_default]
-Compiling architecture behavioral of entity xil_defaultlib.tb_comparator
-Built simulation snapshot TB_Comparator_behav
+Compiling architecture behavioral of entity xil_defaultlib.Logical_Operations_Unit [logical_operations_unit_default]
+Compiling architecture behavioral of entity xil_defaultlib.Bit_Shift [bit_shift_default]
+Compiling architecture behavioral of entity xil_defaultlib.Main_Process [main_process_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_main_process
+Built simulation snapshot TB_Main_Process_behav

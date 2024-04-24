@@ -2,7 +2,9 @@
 2018.1
 Apr  4 2018
 18:43:17
+/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sim_1/new/TB_Add_Sub.vhd,1713858564,vhdl,,,,tb_add_sub,,,,,,,,
 /home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sim_1/new/TB_Adder_3_B.vhd,1713858385,vhdl,,,,tb_adder_3_b,,,,,,,,
+/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sim_1/new/TB_Decode_2_To_4.vhd,1713876810,vhdl,,,,tb_decode_2_to_4,,,,,,,,
 /home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sim_1/new/TB_Decode_3_To_8.vhd,1713857870,vhdl,,,,tb_decode_3_to_8,,,,,,,,
 /home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sim_1/new/TB_Instruction_Decoder.vhd,1713858663,vhdl,,,,tb_instruction_decoder,,,,,,,,
 /home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sim_1/new/TB_Main_Process.vhd,1713862068,vhdl,,,,tb_main_process,,,,,,,,
@@ -15,15 +17,15 @@ Apr  4 2018
 /home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/HA.vhd,1713851040,vhdl,,,,ha,,,,,,,,
 /home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Instruction_Decoder.vhd,1713851298,vhdl,,,,instruction_decoder,,,,,,,,
 /home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/LUT_16_7.vhd,1713852798,vhdl,,,,lut_16_7,,,,,,,,
-/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Main_Process.vhd,1713854143,vhdl,,,,main_process,,,,,,,,
+/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Main_Process.vhd,1713943089,vhdl,,,,main_process,,,,,,,,
 /home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Mux_2_W_3_B.vhd,1713851680,vhdl,,,,mux_2_w_3_b,,,,,,,,
 /home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Mux_2_W_4_B.vhd,1713851387,vhdl,,,,mux_2_w_4_b,,,,,,,,
 /home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Mux_8_W_4_B.vhd,1713853279,vhdl,,,,mux_8_w_4_b,,,,,,,,
 /home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Program_Counter.vhd,1713852090,vhdl,,,,program_counter,,,,,,,,
-/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Program_Rom.vhd,1713861954,vhdl,,,,program_rom,,,,,,,,
+/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Program_Rom.vhd,1713943539,vhdl,,,,program_rom,,,,,,,,
 /home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Reg_3_B.vhd,1713852151,vhdl,,,,reg_3_b,,,,,,,,
 /home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Reg_4_B.vhd,1713852858,vhdl,,,,reg_4_b,,,,,,,,
 /home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Register_Bank.vhd,1713853037,vhdl,,,,register_bank,,,,,,,,
-/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Slow_Clk.vhd,1713852925,vhdl,,,,slow_clk,,,,,,,,
+/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Slow_Clk.vhd,1713942345,vhdl,,,,slow_clk,,,,,,,,
 /home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Tri_State_Buffer_3_B.vhd,1713851772,vhdl,,,,tri_state_buffer_3_b,,,,,,,,
 /home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Tri_State_Buffer_4_B.vhd,1713850813,vhdl,,,,tri_state_buffer_4_b,,,,,,,,

@@ -1,0 +1,1 @@
+-wto "44cfa6dd40264a9699380bccba51978d" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "TB_Negator_behav" "xil_defaultlib.TB_Negator" -log "elaborate.log" 

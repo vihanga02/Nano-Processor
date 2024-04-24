@@ -45,11 +45,14 @@ component Main_Process is
         Zero_Flag : out STD_LOGIC;
         seg_data: out STD_LOGIC_VECTOR (6 downto 0);
         Reg_7_Out : out std_logic_vector (3 downto 0);
-        anode : out STD_LOGIC_VECTOR (3 downto 0)
+        anode : out STD_LOGIC_VECTOR (3 downto 0);
+        Equal : out STD_LOGIC;
+        Greater : out STD_LOGIC;
+        Less : out STD_LOGIC
     );
 end component;
 
-SIGNAL Rst, Clk, Ovf, Zeroes : STD_LOGIC;
+SIGNAL Rst, Clk, Ovf, Zeroes, less, greater, equal : STD_LOGIC;
 SIGNAL  Anode : STD_LOGIC_VECTOR(3 downto 0);
 SIGNAL  reg_7_out : STD_LOGIC_VECTOR(3 downto 0);
 SIGNAL Seg_data : STD_LOGIC_VECTOR(6 downto 0);
@@ -63,7 +66,10 @@ begin
             Zero_Flag => zeroes,
             seg_data => seg_data,
             anode => anode,
-            Reg_7_Out => reg_7_out
+            Reg_7_Out => reg_7_out,
+            Equal => equal,
+            Less => less,
+            Greater => greater
             );
             
     clk_process : process -- clock processor

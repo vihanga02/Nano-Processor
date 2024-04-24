@@ -61,6 +61,14 @@ component Decoder_3_to_8
         Clk : in STD_LOGIC;
         Reset : in STD_LOGIC;
         R : out STD_LOGIC_VECTOR (3 downto 0) := "0000");
+ end component; 
+ 
+ component Reg_8_B
+ Port ( D : in STD_LOGIC_VECTOR (7 downto 0);
+        En : in STD_LOGIC;
+        Clk : in STD_LOGIC;
+        Reset : in STD_LOGIC;
+        R : out STD_LOGIC_VECTOR (7 downto 0) := "0000");
  end component;
  
  signal reg_en_out : std_logic_vector (7 downto 0);
@@ -139,5 +147,12 @@ begin
             Clk => Clk,
             R => R7);                            
             
+    Reg_8 : Reg_8_B
+        port map (
+            D => Value_In,
+            EN => not_reg_0,
+            Reset => Reset,
+            Clk => Clk,
+            R => R7);
 
 end Behavioral;

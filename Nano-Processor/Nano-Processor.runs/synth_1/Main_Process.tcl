@@ -31,6 +31,7 @@ set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
   /home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Add_Sub_Unit.vhd
   /home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Adder_3_B.vhd
+  /home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Comparator.vhd
   /home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Decode_2_TO_4.vhd
   /home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Decoder_3_TO_8.vhd
   /home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/FA.vhd
@@ -58,6 +59,9 @@ read_vhdl -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc /home/vihangamuthumala/Documents/my_work/Nano-Processor/2.xdc
+set_property used_in_implementation false [get_files /home/vihangamuthumala/Documents/my_work/Nano-Processor/2.xdc]
+
 set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]
 

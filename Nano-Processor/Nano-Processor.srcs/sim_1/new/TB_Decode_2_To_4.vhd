@@ -37,7 +37,7 @@ end TB_Decode_2_To_4;
 
 architecture Behavioral of TB_Decode_2_To_4 is
 
-COMPONENT DECODER_2_TO_4
+COMPONENT DECODE_2_TO_4
     Port ( I : in STD_LOGIC_VECTOR (1 downto 0);
            EN : in STD_LOGIC;
            Y : out STD_LOGIC_VECTOR (3 downto 0));
@@ -48,7 +48,7 @@ END COMPONENT;
     SIGNAL y : STD_LOGIC_VECTOR (3 downto 0);
     
 begin
- UTT: DECODER_2_TO_4 PORT MAP(
+ UTT: DECODE_2_TO_4 PORT MAP(
     I => i,
     EN => en,
     Y => y

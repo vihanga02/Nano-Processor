@@ -39,11 +39,11 @@ architecture Behavioral of TB_Programm_Rom is
 
 component Program_Rom is
     Port ( Memo_Sel : in STD_LOGIC_VECTOR (2 downto 0);
-           Instruction_Bus : out STD_LOGIC_VECTOR (11 downto 0));
+           Instruction_Bus : out STD_LOGIC_VECTOR (12 downto 0));
 end component;
 
 signal Memo_Sel : STD_LOGIC_VECTOR (2 downto 0);
-signal Instruction_Bus : STD_LOGIC_VECTOR (11 downto 0);
+signal Instruction_Bus : STD_LOGIC_VECTOR (12 downto 0);
 
 begin
 

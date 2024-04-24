@@ -32,7 +32,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity Instruction_Decoder is
-      Port ( Instruction_Bus : in STD_LOGIC_VECTOR (11 downto 0);
+      Port ( Instruction_Bus : in STD_LOGIC_VECTOR (12 downto 0);
              Check_For_Jump : in STD_LOGIC_VECTOR (3 downto 0);
              Register_Enable : out STD_LOGIC_VECTOR (2 downto 0);
              Load_Select : out STD_LOGIC;
@@ -41,7 +41,8 @@ entity Instruction_Decoder is
              Register_Select_1 : out STD_LOGIC_VECTOR (2 downto 0);
              A_S_Select : out STD_LOGIC;
              Jump_Flag : out STD_LOGIC;
-             Jump_Address : out STD_LOGIC_VECTOR (2 downto 0));
+             Jump_Address : out STD_LOGIC_VECTOR (2 downto 0);
+             Comparator_En : out STD_LOGIC);
 end Instruction_Decoder;
 
 architecture Behavioral of Instruction_Decoder is
@@ -54,7 +55,7 @@ begin
      
      Register_Enable <= Instruction_bus (9 downto 7);                 
      
-     Load_Select <= Instruction_bus(11) AND NOT(Instruction_bus(10));  
+     Load_Select <= NOT Instruction_bus(12) AND Instruction_bus(11) AND NOT(Instruction_bus(10));  
      
      Immediate_Value <= Instruction_bus(3 downto 0);                    
      
@@ -62,11 +63,11 @@ begin
      
      Register_Select_1 <= Instruction_bus(6 downto 4);                  
      
-     A_S_Select <= NOT(Instruction_bus(11)) AND Instruction_bus(10);    
+     A_S_Select <= NOT Instruction_bus(12) AND NOT(Instruction_bus(11)) AND Instruction_bus(10);    
      
-     Jump_Flag <= Instruction_bus(11) AND Instruction_bus(10) AND all_zeroes;
+     Jump_Flag <= NOT Instruction_bus(12) AND Instruction_bus(11) AND Instruction_bus(10) AND all_zeroes;
      
      Jump_Address <= Instruction_bus(2 downto 0);
  
-
+     Comparator_En <= Instruction_bus(12) AND NOT Instruction_bus(11) AND NOT Instruction_bus(10);   
 end Behavioral;

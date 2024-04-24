@@ -39,32 +39,41 @@ architecture Behavioral of TB_Main_Process is
 
 component Main_Process is
     Port (
-        cout : out std_logic_vector (3 downto 0);
-        --cout1 : out std_logic_vector (3 downto 0);
         Clk_In : in STD_LOGIC;
         Reset : in STD_LOGIC;
         Overflow_Flag : out STD_LOGIC;
         Zero_Flag : out STD_LOGIC;
+        --Equal : out STD_LOGIC;
+        Greater : out STD_LOGIC;
+        Less : out STD_LOGIC;
         seg_data: out STD_LOGIC_VECTOR (6 downto 0);
+        Logical_Operation_unit_out : out STD_LOGIC_VECTOR (3 downto 0);
+        Bit_Shifter_out : out STD_LOGIC_VECTOR (3 downto 0);
+        Reg_7_out : out std_logic_vector (3 downto 0);
         anode : out STD_LOGIC_VECTOR (3 downto 0)
     );
 end component;
 
 SIGNAL Rst, Clk, Ovf, Zeroes : STD_LOGIC;
+SIGNAL equal, greater, less : STD_LOGIC;
 SIGNAL  Anode : STD_LOGIC_VECTOR(3 downto 0);
-SIGNAL  cout : STD_LOGIC_VECTOR(3 downto 0);
+SIGNAL  Logical_Operation_unit_out,Bit_Shifter_out, Reg_7_out : STD_LOGIC_VECTOR(3 downto 0);
 SIGNAL Seg_data : STD_LOGIC_VECTOR(6 downto 0);
 
 begin
     UTT : Main_Process
         port map (
-            cout => cout,
-            -- cout1 => count1,
             clk_In => clk,
             Reset => rst,
             Overflow_Flag => ovf,
             Zero_Flag => zeroes,
             seg_data => seg_data,
+            Greater => greater,
+            Less => less,
+            --Equal => equal,
+            Logical_Operation_unit_out => Logical_Operation_unit_out,
+            Bit_Shifter_out => Bit_Shifter_out,
+            Reg_7_out => Reg_7_out,
             anode => anode
             );
             

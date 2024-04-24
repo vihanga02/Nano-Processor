@@ -33,22 +33,22 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity Program_Rom is
     Port ( Memo_Sel : in STD_LOGIC_VECTOR (2 downto 0);
-           Instruct_Bus : out STD_LOGIC_VECTOR (11 downto 0));
+           Instruct_Bus : out STD_LOGIC_VECTOR (12 downto 0));
 end Program_Rom;
 
 architecture Behavioral of Program_Rom is
 
 
-type rom_type is array (0 to 7) of std_logic_vector(11 downto 0); 
+type rom_type is array (0 to 7) of std_logic_vector(12 downto 0); 
     signal program_ROM : rom_type := (
-        "100010000001",
-        "100100000010",
-        "100110000011",
-        "000010100000",
-        "000010110000",
-        "001110010000",
-        "000000000000",
-        "110000000111"
+        "0101110000001",
+        "0100100000010",
+        "0100110000011",
+        "0001110100000",
+        "0001110110000",
+        "0110000000110",
+        "0110000000101",
+        "0000000000000"
         );
 
 begin

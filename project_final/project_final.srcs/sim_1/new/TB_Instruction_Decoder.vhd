@@ -38,7 +38,7 @@ end TB_Instruction_Decoder;
 architecture Behavioral of TB_Instruction_Decoder is
 
 component Instruction_Decoder is
-      Port ( Instruction_Bus : in STD_LOGIC_VECTOR (11 downto 0);
+      Port ( Instruction_Bus : in STD_LOGIC_VECTOR (12 downto 0);
              Check_For_Jump : in STD_LOGIC_VECTOR (3 downto 0);
              Register_Enable : out STD_LOGIC_VECTOR (2 downto 0);
              Load_Select : out STD_LOGIC;
@@ -47,45 +47,64 @@ component Instruction_Decoder is
              Register_Select_1 : out STD_LOGIC_VECTOR (2 downto 0);
              A_S_Select : out STD_LOGIC;
              Jump_Flag : out STD_LOGIC;
-             Jump_Address : out STD_LOGIC_VECTOR (2 downto 0));
+             Jump_Address : out STD_LOGIC_VECTOR (2 downto 0);
+             Bit_Shift_EN : out STD_LOGIC;
+              Logical_Operation_EN : out STD_LOGIC;
+              Bit_Shift_Count : out STD_LOGIC_VECTOR (1 downto 0);
+              Logical_Op : out STD_LOGIC_VECTOR (1 downto 0));
 end component;
 
-    SIGNAL ins_bus : STD_LOGIC_VECTOR(11 downto 0);
+    SIGNAL ins_bus : STD_LOGIC_VECTOR(12 downto 0);
     SIGNAL jmp_check, im_val : STD_LOGIC_VECTOR(3 downto 0);
     SIGNAL reg_enb, reg_sel_0, reg_sel_1, jmp_addr : STD_LOGIC_VECTOR(2 downto 0);
     SIGNAL load_sel, add_sub_sel, jmp : STD_LOGIC;
-    
+    SIGNAL Bit_Shift_EN, Logical_Operation_EN : STD_LOGIC;
+    SIGNAL Bit_Shift_Count, Logical_Op : STD_LOGIC_VECTOR (1 downto 0);
+
 begin
-    UUT : Instruction_decoder PORT MAP (
-        Instruction_Bus => ins_bus,
-        Check_For_Jump => jmp_check,
-        Register_Enable => reg_enb,
-        Load_Select => load_sel,
-        Immediate_Value => im_val,
-        Register_Select_0 => reg_sel_0,
-        Register_Select_1 => reg_sel_1,
-        A_S_Select => add_sub_sel,
-        Jump_Flag => jmp,
-        Jump_Address => jmp_addr
-    );
+    UUT : Instruction_decoder 
+        PORT MAP (
+            Instruction_Bus => ins_bus,
+            Check_For_Jump => jmp_check,
+            Register_Enable => reg_enb,
+            Load_Select => load_sel,
+            Immediate_Value => im_val,
+            Register_Select_0 => reg_sel_0,
+            Register_Select_1 => reg_sel_1,
+            A_S_Select => add_sub_sel,
+            Jump_Flag => jmp,
+            Jump_Address => jmp_addr,
+            Bit_Shift_EN => Bit_Shift_EN,
+            Logical_Operation_EN => Logical_Operation_EN,
+            Bit_Shift_Count => Bit_Shift_Count,
+            Logical_Op => Logical_Op );
     
     process
     begin
         jmp_check <= "0000";
     -- MOVI R1, 10
-        ins_bus <= "100010001010";
+        ins_bus <= "0100010001010";
         wait for 100ns;
         
         -- MOVI R2, 1
-        ins_bus <= "100100000101";
+        ins_bus <= "0100100000101";
         wait for 100ns;
         
         -- NEG R2
-        ins_bus <= "010100000000";
+        ins_bus <= "0010100000000";
         wait for 100ns;
         
         -- JZR 1
-        ins_bus <= "110000000110";
+        ins_bus <= "0110000000110";
+        wait for 100ns;
+        
+        ins_bus <= "0110000000011";
+        wait for 100ns;
+         -- 
+        ins_bus <= "1000010000000";
+        wait for 100ns;
+        
+        ins_bus <= "1010100010010" ;
         wait;
     end process;
 

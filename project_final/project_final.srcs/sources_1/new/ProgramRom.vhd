@@ -33,29 +33,38 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity Program_Rom is
     Port ( Memo_Sel : in STD_LOGIC_VECTOR (2 downto 0);
-           Instruct_Bus : out STD_LOGIC_VECTOR (11 downto 0));
+           Instruct_Bus : out STD_LOGIC_VECTOR (12 downto 0));
 end Program_Rom;
 
 architecture Behavioral of Program_Rom is
 
-type rom_type is array (0 to 7) of std_logic_vector(11 downto 0); 
+type rom_type is array (0 to 7) of std_logic_vector(12 downto 0); 
     signal program_ROM : rom_type := (
-        "100010000001",
-        "100100000010",
-        "100110000011",
-        "000010100000",
-        "000010110000",
-        "010010000000",
-        "000000000000",
-        "000000000000"
---            "100010001010", -- MOVI R1,10
---        "100100000001", -- MOVI R2,1
---        "010100000000", -- NEG R2
---        "000010100000", -- ADD R1,R2
---        "110010000111", -- JNZ R1,0
---        "110000000011", -- 
---        "000000000000" ,
---        "000000000000" 
+--        "0100010000001",
+--        "0100100000010",
+--        "0100110000011",
+--        "1000010000001", -- bit shift
+--        "1010010000010",  -- logical operator
+--        "0010010000000",
+--        "0000000000000",
+--        "0000000000000"
+        
+        "0101110000001",
+        "0100100000010",
+        "0100110000011",
+        "0001110100000",
+        "0001110110000",
+        "1001110000001",
+        "1010000000001",
+        "0110000000101"
+--            "0100010001010", -- MOVI R1,10
+--            "1000010000001",
+--            "1010100000000", -- MOVI R2,1
+--            "0100100001011", -- NEG R2
+--            "1000100000010", -- ADD R1,R2
+--            "1010100010010", -- JNZ R1,0
+--            "0000000000000", -- 
+--            "0000000000000"
         );
 
 begin

@@ -32,21 +32,26 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity Main_Process is
-    Port (cout : out std_logic_vector(3 downto 0);
-        -- cout1 : out std_logic_vector(3 downto 0);
-        Clk_In : in STD_LOGIC;
+    Port (
+        Clk : in STD_LOGIC;
         Reset : in STD_LOGIC;
         Overflow_Flag : out STD_LOGIC;
         Zero_Flag : out STD_LOGIC;
-        seg_data: out STD_LOGIC_VECTOR (6 downto 0);
-        anode : out STD_LOGIC_VECTOR (3 downto 0)
+        Seg_data: out STD_LOGIC_VECTOR (6 downto 0);
+        --Equal : out STD_LOGIC;
+        Greater : out STD_LOGIC;
+        Less : out STD_LOGIC;
+        anode : out STD_LOGIC_VECTOR (3 downto 0);
+        Logical_Operation_unit_out : out STD_LOGIC_VECTOR (3 downto 0);
+        Reg_7_out : out std_logic_vector(3 downto 0);
+        Bit_Shifter_out : out STD_LOGIC_VECTOR (3 downto 0)
     );
 end Main_Process;
 
 architecture Behavioral of Main_Process is
 
 component Instruction_Decoder is
-      Port ( Instruction_Bus : in STD_LOGIC_VECTOR (11 downto 0);
+      Port ( Instruction_Bus : in STD_LOGIC_VECTOR (12 downto 0);
              Check_For_Jump : in STD_LOGIC_VECTOR (3 downto 0);
              Register_Enable : out STD_LOGIC_VECTOR (2 downto 0);
              Load_Select : out STD_LOGIC;
@@ -55,7 +60,11 @@ component Instruction_Decoder is
              Register_Select_1 : out STD_LOGIC_VECTOR (2 downto 0);
              A_S_Select : out STD_LOGIC;
              Jump_Flag : out STD_LOGIC;
-             Jump_Address : out STD_LOGIC_VECTOR (2 downto 0));
+             Jump_Address : out STD_LOGIC_VECTOR (2 downto 0);
+             Bit_Shift_EN : out STD_LOGIC;
+              Logical_Operation_EN : out STD_LOGIC;
+              Bit_Shift_Count : out STD_LOGIC_VECTOR (1 downto 0);
+              Logical_Op : out STD_LOGIC_VECTOR (1 downto 0));
 end component;
 
 component Mux_8_W_4_B is
@@ -114,7 +123,7 @@ end component;
 
 component Program_Rom is
     Port ( Memo_Sel : in STD_LOGIC_VECTOR (2 downto 0);
-           Instruct_Bus : out STD_LOGIC_VECTOR (11 downto 0));
+           Instruct_Bus : out STD_LOGIC_VECTOR (12 downto 0));
 end component;
 
 component Adder_3_bit is
@@ -141,8 +150,35 @@ component Slow_Clk is
            Clk_out : out STD_LOGIC);
 end component;
 
+component Comparator is
+    Port ( A : in STD_LOGIC_VECTOR (3 downto 0);
+           B : in STD_LOGIC_VECTOR (3 downto 0);
+           Equal : out STD_LOGIC;
+           Greater : out STD_LOGIC;
+           Less : out STD_LOGIC);
+end component;
 
-signal Instruction_Bus : STD_LOGIC_VECTOR (11 downto 0);
+component Logical_Operations_Unit is
+    Port (
+        A : in STD_LOGIC_VECTOR (3 downto 0);
+        B : in STD_LOGIC_VECTOR (3 downto 0);
+        Op_Select : in STD_LOGIC_VECTOR (1 downto 0);
+        EN : in STD_LOGIC;
+        Out_Result : out STD_LOGIC_VECTOR (3 downto 0)
+    );
+end component;
+
+component Bit_Shift is
+    Port ( 
+        A : in STD_LOGIC_VECTOR (3 downto 0);
+        B_Shift : in STD_LOGIC_VECTOR (1 downto 0);
+        EN : in STD_LOGIC;
+        A_out : out STD_LOGIC_VECTOR (3 downto 0));
+end component;
+
+
+
+signal Instruction_Bus : STD_LOGIC_VECTOR (12 downto 0);
 signal Check_For_Jump : STD_LOGIC_VECTOR (3 downto 0);
 signal Register_Enable : STD_LOGIC_VECTOR (2 downto 0);
 signal Immediate_Value : STD_LOGIC_VECTOR (3 downto 0);
@@ -151,7 +187,7 @@ signal A_S_Select,Jump_Flag, Load_Select: STD_LOGIC;
 signal Jump_Address : STD_LOGIC_VECTOR (2 downto 0);
 
 signal reg_bank_in : STD_LOGIC_VECTOR (3 downto 0);
-signal clk : STD_LOGIC;
+signal clk_in : STD_LOGIC;
 signal Data_bus_0, Data_bus_1, Data_bus_2, Data_bus_3, Data_bus_4, Data_bus_5, Data_bus_6, Data_bus_7 : STD_LOGIC_VECTOR (3 downto 0);
 
 signal mux_0_out, mux_1_out : STD_LOGIC_VECTOR (3 downto 0);
@@ -163,6 +199,10 @@ signal adder_3_bit_out, next_address : STD_LOGIC_VECTOR (2 downto 0);
 signal adder_3_bit_carry_out : STD_LOGIC;
 
 signal memory_select : STD_LOGIC_VECTOR (2 downto 0);
+
+signal bit_shift_en, logical_en : STD_LOGIC; 
+signal bit_shift_count, logical_op : STD_LOGIC_VECTOR (1 downto 0);
+signal eq : STD_LOGIC;
 
 begin 
 Instruction_decoder_0 : Instruction_decoder
@@ -176,7 +216,11 @@ Instruction_decoder_0 : Instruction_decoder
          Register_Select_1 => Register_Select_1,
          A_S_Select => A_S_Select,
          Jump_Flag => Jump_Flag,
-         Jump_Address => Jump_Address);
+         Jump_Address => Jump_Address,
+         Bit_Shift_EN => bit_shift_en,
+          Logical_Operation_EN => logical_en,
+          Bit_Shift_Count => bit_shift_count,
+          Logical_Op => logical_op);
          
 Register_Bank_0 : Register_Bank
     port map (
@@ -259,7 +303,7 @@ Program_Counter_0 : Program_counter
     port map (
           Counter_IN => next_address,
           Reset => Reset,
-          Clk => CLK,
+          Clk => clk_in,
           Counter_Out => memory_select);
       
 Pro_rom : Program_Rom
@@ -269,16 +313,39 @@ Pro_rom : Program_Rom
         
 slow_clock : Slow_clk
     port map(
-        Clk_in => Clk_in,
-        CLk_out => clk);
+        Clk_in => clk,
+        CLk_out => clk_in);
  
 Seg_display : LUT_16_7
     port map(
         address => Data_bus_7,
         data => seg_data);
         
+ Comparator_0 : Comparator
+    Port map( A => mux_0_out,
+            B => mux_1_out,
+            Equal => eq,
+            Greater => Greater,
+            Less => Less);
+          
+Logical_unit : Logical_Operations_Unit
+    Port map(
+        A => mux_0_out,
+        B => mux_1_out,
+        Op_Select => logical_op,
+        EN => logical_en,
+        Out_Result => Logical_Operation_unit_out);
+           
+           
+Bit_Shift_0 :  Bit_Shift 
+    Port map ( 
+        A => mux_1_out,
+        B_Shift => bit_shift_count,
+        EN => bit_shift_en,
+        A_out => Bit_Shifter_out);
+ 
+
 anode <= "1110";
-cout <= Data_bus_7; 
---cout1 <= Check_for_jump;
+reg_7_out <= Data_bus_7; 
 
 end Behavioral;

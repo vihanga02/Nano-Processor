@@ -74,6 +74,7 @@ set rc [catch {
   set_property ip_output_repo /home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   add_files -quiet /home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.runs/synth_1/Main_Process.dcp
+  read_xdc /home/vihangamuthumala/Documents/my_work/Nano-Processor/2.xdc
   link_design -top Main_Process -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]
@@ -146,6 +147,24 @@ if {$rc} {
   return -code error $RESULT
 } else {
   end_step route_design
+  unset ACTIVE_STEP 
+}
+
+start_step write_bitstream
+set ACTIVE_STEP write_bitstream
+set rc [catch {
+  create_msg_db write_bitstream.pb
+  catch { write_mem_info -force Main_Process.mmi }
+  write_bitstream -force Main_Process.bit 
+  catch {write_debug_probes -quiet -force Main_Process}
+  catch {file copy -force Main_Process.ltx debug_nets.ltx}
+  close_msg_db -file write_bitstream.pb
+} RESULT]
+if {$rc} {
+  step_failed write_bitstream
+  return -code error $RESULT
+} else {
+  end_step write_bitstream
   unset ACTIVE_STEP 
 }
 
