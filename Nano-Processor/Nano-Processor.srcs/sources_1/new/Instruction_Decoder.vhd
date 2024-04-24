@@ -57,7 +57,11 @@ begin
  
      all_zeroes <= NOT(Check_For_Jump(0)) AND NOT(Check_For_Jump(1)) AND NOT(Check_For_Jump(2)) AND NOT(Check_For_Jump(3));
      
-     Register_Enable <= Instruction_bus (9 downto 7);                 
+    -- Register_Enable <= Instruction_bus (9 downto 7); 
+     
+     Register_Enable(0) <= Instruction_bus (7) AND NOT Instruction_bus(12);
+     Register_Enable(1) <= Instruction_bus (8) AND NOT Instruction_bus(12);
+     Register_Enable(2) <= Instruction_bus (9) AND NOT Instruction_bus(12);                 
      
      Load_Select <= NOT Instruction_bus(12) AND Instruction_bus(11) AND NOT(Instruction_bus(10));  
      

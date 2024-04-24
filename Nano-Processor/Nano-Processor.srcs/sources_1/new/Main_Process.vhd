@@ -204,6 +204,7 @@ signal Comparator_En, Logical_unit_en : STD_LOGIC;
 signal Logical_Operation_Select : STD_LOGIC_VECTOR (1 downto 0);
 
 signal B_Shift_with_Dir : STD_LOGIC_VECTOR (2 downto 0);
+signal A_out, Out_result : STD_LOGIC_VECTOR(3 downto 0);
 
 begin 
 Instruction_decoder_0 : Instruction_decoder
@@ -324,8 +325,8 @@ Seg_display : LUT_16_7
  
 comparator_0 :  Comparator
     Port map ( 
-           A => mux_0_out,
-           B => mux_1_out,
+           A => mux_1_out,
+           B => mux_0_out,
            EN => comparator_en,
            Equal => Equal,
            Greater => Greater,
@@ -333,19 +334,26 @@ comparator_0 :  Comparator
            
 Logical_unit_0 :  Logical_Unit 
       Port map (
-           A => mux_0_out,
-           B => mux_1_out,
+           A => mux_1_out,
+           B => mux_0_out,
            En => Logical_unit_en,
            Op_Select => Logical_Operation_Select,
-           Out_Result => Log_and_Shift_out);
+           Out_Result => Out_Result);
    
  Bit_Shift_0 :  Bit_Shift 
        Port map ( 
-           A => mux_0_out,
+           A => mux_1_out,
            B_Shift_with_Dir => B_Shift_with_Dir,
            En => Bit_Shift_En,
-           A_out => Log_and_Shift_out);
-        
+           A_out => A_out);
+           
+Mux_2_W_4_B_1 : Mux_2_W_4_B
+       port map (
+              S_in => Bit_Shift_En,
+              A_in => Out_Result,
+              B_in => A_out,
+              C_out => Log_and_Shift_out);
+
 Zero_Flag <= zero AND NOT instruction_bus(12) AND NOT instruction_bus(11) AND NOT instruction_bus(10);     
 Overflow_Flag <= over AND NOT instruction_bus(12) AND NOT instruction_bus(11) AND NOT instruction_bus(10);
 anode <= "1110";

@@ -50,14 +50,17 @@ component Instruction_Decoder is
              Jump_Flag : out STD_LOGIC;
              Jump_Address : out STD_LOGIC_VECTOR (2 downto 0);
              Comparator_En : out STD_LOGIC;
+             Logical_unit_en : out STD_LOGIC;
+              Logical_Operation_Select : out STD_LOGIC_VECTOR(1 Downto 0);
               Bit_Shift_En : out STD_LOGIC;
               Bit_Shift_with_Dir : out STD_LOGIC_VECTOR (2 downto 0));
 end component;
 
     SIGNAL ins_bus : STD_LOGIC_VECTOR(12 downto 0);
     SIGNAL jmp_check, im_val : STD_LOGIC_VECTOR(3 downto 0);
-    SIGNAL reg_enb, reg_sel_0, reg_sel_1, jmp_addr, B_Shift_with_Dir : STD_LOGIC_VECTOR(2 downto 0);
-    SIGNAL load_sel, add_sub_sel, jmp, Comparator_En, Bit_Shift_En : STD_LOGIC;
+    SIGNAL reg_enb, reg_sel_0, reg_sel_1, jmp_addr, B_Shift_with_Dir: STD_LOGIC_VECTOR(2 downto 0);
+    SIGNAL load_sel, add_sub_sel, jmp, Comparator_En, Bit_Shift_En, Logical_unit_en : STD_LOGIC;
+    SIGNAL Logical_Operation_Select :  STD_LOGIC_VECTOR (1 downto 0);
     
 begin
     UUT : Instruction_decoder 
@@ -72,6 +75,9 @@ begin
         A_S_Select => add_sub_sel,
         Jump_Flag => jmp,
         Jump_Address => jmp_addr,
+        Comparator_En => Comparator_En,
+        Logical_unit_en => Logical_unit_en,
+        Logical_Operation_Select => Logical_Operation_Select,
         Bit_Shift_En => Bit_Shift_En,
         Bit_Shift_with_Dir => B_Shift_with_Dir);
     
@@ -93,11 +99,11 @@ begin
             wait for 100ns;
             
             -- NEG R2
-            ins_bus <= "0010100000000";
+            ins_bus <= "1010010110011";
             wait for 100ns;
             
             -- JZR 1
-            ins_bus <= "0110000000110";
+            ins_bus <= "1100110000001";
             wait;
         end process;
 

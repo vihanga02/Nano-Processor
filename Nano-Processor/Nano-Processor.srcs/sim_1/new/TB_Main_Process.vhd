@@ -70,7 +70,8 @@ begin
             Reg_7_Out => reg_7_out,
             Equal => equal,
             Less => less,
-            Greater => greater
+            Greater => greater,
+            Log_and_Shift_out => Log_and_Shift_out
             );
             
     clk_process : process -- clock processor
@@ -88,7 +89,7 @@ begin
             Rst <= '1';
             wait for 50ns;
             Rst <= '0';
-            wait for 450ns; --wait forever
+            wait for 850ns; --wait forever
         
         end process;
 
