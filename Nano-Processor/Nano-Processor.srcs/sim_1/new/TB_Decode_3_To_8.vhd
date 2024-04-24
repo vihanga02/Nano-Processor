@@ -51,7 +51,11 @@ begin
         EN => en,
         Y => y
     );
-    
+--IndexNumber
+--220213D = 110 101 110 000 110 101
+--220419N = 110 101 110 100 000 011
+--220303e = 110 101 110 010 001 111
+--220407C = 110 101 110 011 110 111    
     process
     begin
         i <= "111";
@@ -66,9 +70,12 @@ begin
         i <= "011";
         en <= '0';
         wait for 100 ns;
+        i <= "010";
+        wait for 100 ns;
         i <= "001";
         wait for 100 ns;
         i <= "000";
+        
         wait;
-    end process;
+        end process;
 end Behavioral;

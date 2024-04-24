@@ -71,15 +71,21 @@ UUT : Reg_3_B PORT MAP (
     
     end process;
     
+    --IndexNumber
+    --220213D = 110 101 110 000 110 101
+    --220419N = 110 101 110 100 000 011
+    --220303e = 110 101 110 010 001 111
+    --220407C = 110 101 110 011 110 111    
+    
     reg_process : process
     begin
         Rst <= '1';
         En <= '0';
-        D <= "011";
+        D <= "101";
         wait for 100ns;
         
         Rst <= '0';
-        D <= "110";
+        D <= "011";
         wait for 100ns;
         
         En <= '1';
@@ -93,12 +99,11 @@ UUT : Reg_3_B PORT MAP (
         wait for 100ns;
         Rst <= '0';
         
-        D <= "101";
+        D <= "110";
         wait for 100ns;
         
         wait; -- wait forever
     
     end process;
-
 
 end Behavioral;

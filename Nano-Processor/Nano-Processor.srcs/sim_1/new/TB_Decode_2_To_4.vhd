@@ -53,25 +53,32 @@ begin
     EN => en,
     Y => y
     );
- process
- begin
-      i <= "00";
-      en <= '1';
-      wait for 125 ns;
-      i <= "01";
-      wait for 125 ns;
-      i <= "10";
-      wait for 125 ns;
-      i <= "11";
-      wait for 125 ns;
-       en <= '0';
-       i <= "00";
-      wait for 125 ns;
-      i <= "01";
-      wait for 125 ns;
-      i <= "10";
-      wait for 125 ns;
-      i <= "11";
-      wait;
-end process;
+--IndexNumber
+    --220213D = 11 0101 1100 0011 0101
+    --220419N = 11 0101 1101 0000 0011
+    --220303e = 11 0101 1100 1000 1111
+    --220407C = 11 0101 1100 1111 0111
+     
+     
+     process
+     begin
+          i <= "00";
+          en <= '1';
+          wait for 125 ns;
+          i <= "01";
+          wait for 125 ns;
+          i <= "10";
+          wait for 125 ns;
+          i <= "11";
+          wait for 125 ns;
+           en <= '0';
+           i <= "00";
+          wait for 125 ns;
+          i <= "01";
+          wait for 125 ns;
+          i <= "10";
+          wait for 125 ns;
+          i <= "11";
+          wait;
+    end process;
 end Behavioral;

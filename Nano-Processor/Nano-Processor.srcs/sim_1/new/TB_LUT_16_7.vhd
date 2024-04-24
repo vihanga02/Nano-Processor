@@ -50,15 +50,21 @@ UUT : LUT_16_7 port map (
     address => address,
     data => data);
 
-    process begin
-        -- 11 0101 1100 1111 0111
+--IndexNumber
+--220213D = 11 0101 1100 0011 0101
+--220419N = 11 0101 1101 0000 0011
+--220303e = 11 0101 1100 1000 1111
+--220407C = 11 0101 1100 1111 0111   
+
+process 
+    begin
         address <= "0111";
         wait for 250 ns;
         
         address <= "1111";
         wait for 250 ns;
         
-        address <= "1100";
+        address <= "0011";
         wait for 250 ns;
         
         address <= "0101";

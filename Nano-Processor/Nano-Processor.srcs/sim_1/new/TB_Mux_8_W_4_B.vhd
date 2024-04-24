@@ -66,33 +66,46 @@ UUT:MUX_8_W_4_B
          A7=>A7,
          C_OUT=>C_OUT,
          S=>S);
-process
-begin
-    
-    A0<="0000";--0
-    A1<="0010";--2
-    A2<="0010";--2
-    A3<="0000";--0
-    A4<="0100";--4
-    A5<="0001";--1
-    A6<="1001";--9
-    A7<="1111";--F
-    S<="000";
-    WAIT FOR 100 ns;
-    S<="001";
-    WAIT FOR 100 ns;
-    S<="010";
-    WAIT FOR 100 ns;
-    S<="011";
-    WAIT FOR 100 ns;
-    S<="100";
-    WAIT FOR 100 ns;
-    S<="101";
-    WAIT FOR 100 ns;
-    S<="110";
-    WAIT FOR 100 ns;
-    S<="111";
-    WAIT;
-end process;
+--IndexNumber
+         --220213D = 11 0101 1100 0011 0101
+         --220419N = 11 0101 1101 0000 0011
+         --220303e = 11 0101 1100 1000 1111
+         --220407C = 11 0101 1100 1111 0111
+         
+  process
+     begin
+         
+         A0 <= "0011";--3
+         A1 <= "0000";--0
+         A2 <= "1000";--8
+         A3 <= "1111";--F
+         A4 <= "0101";--5
+         A5 <= "1101";--D
+         A6 <= "0111";--7
+         A7 <= "1100";--C
+         S <= "000";
+         
+         WAIT FOR 100 ns;
+         S <= "001";
+         
+         WAIT FOR 100 ns;
+         S <= "010";
+         
+         WAIT FOR 100 ns;
+         S <= "011";
+         
+         WAIT FOR 100 ns;
+         S <= "100";
+         
+         WAIT FOR 100 ns;
+         S <= "101";
+         
+         WAIT FOR 100 ns;
+         S <= "110";
+         
+         WAIT FOR 100 ns;
+         S <= "111";
+         WAIT;
+     end process;
 
 end Behavioral;

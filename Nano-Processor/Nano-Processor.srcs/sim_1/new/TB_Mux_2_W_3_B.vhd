@@ -58,20 +58,24 @@ UUT: Mux_2_W_3_B
     S_in => S_in,
     C_out => C_out);
     
+--IndexNumber
+    --220213D = 110 101 110 000 110 101
+    --220419N = 110 101 110 100 000 011
+    --220303e = 110 101 110 010 001 111
+    --220407C = 110 101 110 011 110 111
+          
 process
-begin
-  
---index number= 220419N = 0010 0010 0000 0100 0001 1001
-  A_in <= "001";
-  B_in <= "100";
-  S_in <= '1';
-
-  wait for 100 ns;
-  S_in <= '0';
-
-  wait for 100 ns;
-  S_in <= '1';
-  wait;
-end process;
+    begin
+      A_in <= "101";
+      B_in <= "011";
+      S_in <= '1';
+    
+      wait for 100 ns;
+      S_in <= '0';
+    
+      wait for 100 ns;
+      S_in <= '1';
+      wait;
+  end process;
 
 end Behavioral;

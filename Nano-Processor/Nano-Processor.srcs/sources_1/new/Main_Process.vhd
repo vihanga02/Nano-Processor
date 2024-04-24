@@ -43,7 +43,8 @@ entity Main_Process is
         Reg_7_Out : out std_logic_vector(3 downto 0);
         Equal : out STD_LOGIC;
         Greater : out STD_LOGIC;
-        Less : out STD_LOGIC
+        Less : out STD_LOGIC;
+        Log_and_Shift_out : out STD_LOGIC_VECTOR (3 downto 0)
     );
 end Main_Process;
 
@@ -60,7 +61,9 @@ component Instruction_Decoder is
              A_S_Select : out STD_LOGIC;
              Jump_Flag : out STD_LOGIC;
              Jump_Address : out STD_LOGIC_VECTOR (2 downto 0);
-             Comparator_En : out STD_LOGIC);
+             Comparator_En : out STD_LOGIC;
+             Logical_unit_en : out STD_LOGIC;
+             Logical_Operation_Select : out STD_LOGIC_VECTOR(1 Downto 0));
 end component;
 
 component Mux_8_W_4_B is
@@ -145,13 +148,23 @@ component Slow_Clk is
            Clk_out : out STD_LOGIC);
 end component;
 
-COMPONENT Comparator is
+component Comparator is
     Port ( A : in STD_LOGIC_VECTOR (3 downto 0);
            B : in STD_LOGIC_VECTOR (3 downto 0);
            EN : in STD_LOGIC;
            Equal : out STD_LOGIC;
            Greater : out STD_LOGIC;
            Less : out STD_LOGIC);
+end component;
+
+component Logical_Unit is
+    Port (
+        A : in STD_LOGIC_VECTOR (3 downto 0);
+        B : in STD_LOGIC_VECTOR (3 downto 0);
+        En : in STD_LOGIC;
+        Op_Select : in STD_LOGIC_VECTOR (1 downto 0);
+        Out_Result : out STD_LOGIC_VECTOR (3 downto 0)
+    );
 end component;
 
 signal Instruction_Bus : STD_LOGIC_VECTOR (12 downto 0);
@@ -177,7 +190,8 @@ signal adder_3_bit_carry_out : STD_LOGIC;
 signal memory_select : STD_LOGIC_VECTOR (2 downto 0);
 
 signal zero, over : STD_LOGIC;
-signal Comparator_En : STD_LOGIC;
+signal Comparator_En, Logical_unit_en : STD_LOGIC;
+signal Logical_Operation_Select : STD_LOGIC_VECTOR (1 downto 0);
 
 begin 
 Instruction_decoder_0 : Instruction_decoder
@@ -192,7 +206,9 @@ Instruction_decoder_0 : Instruction_decoder
          A_S_Select => A_S_Select,
          Jump_Flag => Jump_Flag,
          Jump_Address => Jump_Address,
-         Comparator_En => Comparator_En);
+         Comparator_En => Comparator_En,
+         Logical_Unit_En => Logical_unit_en,
+         Logical_Operation_Select => Logical_Operation_Select);
          
 Register_Bank_0 : Register_Bank
     port map (
@@ -293,14 +309,22 @@ Seg_display : LUT_16_7
         data => seg_data);
  
 comparator_0 :  Comparator
-        Port map ( 
-               A => mux_0_out,
-               B => mux_1_out,
-               EN => comparator_en,
-               Equal => Equal,
-               Greater => Greater,
-               Less => Less);
-       
+    Port map ( 
+           A => mux_0_out,
+           B => mux_1_out,
+           EN => comparator_en,
+           Equal => Equal,
+           Greater => Greater,
+           Less => Less);
+           
+Logical_unit_0 :  Logical_Unit 
+      Port map (
+           A => mux_0_out,
+           B => mux_1_out,
+           En => Logical_unit_en,
+           Op_Select => Logical_Operation_Select,
+           Out_Result => Log_and_Shift_out);
+   
         
 Zero_Flag <= zero AND NOT instruction_bus(12) AND NOT instruction_bus(11) AND NOT instruction_bus(10);     
 Overflow_Flag <= over AND NOT instruction_bus(12) AND NOT instruction_bus(11) AND NOT instruction_bus(10);

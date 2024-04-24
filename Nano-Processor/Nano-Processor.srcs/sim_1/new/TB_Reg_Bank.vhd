@@ -82,6 +82,13 @@ UUT: Register_Bank
       
   end process;
   
+    
+--IndexNumber
+--220213D = 11 0101 1100 0011 0101
+--220419N = 11 0101 1101 0000 0011
+--220303e = 11 0101 1100 1000 1111
+--220407C = 11 0101 1100 1111 0111  
+  
   process
   begin
       reset <= '1';
@@ -91,27 +98,27 @@ UUT: Register_Bank
   
       selecter <= "000";
       wait for 10 ns;
-      input <= "0000";    --0
+      input <= "0101";    --5
       
       wait for 100 ns;
       selecter <= "001";
       wait for 10 ns;
-      input <= "0010";    --2
+      input <= "0011";    --3
       
       wait for 100 ns;
       selecter <= "010";
       wait for 10 ns;
-      input <= "0100";    --4
+      input <= "1111";    --F
       
       wait for 100 ns;
       selecter <= "011";
       wait for 5 ns;
-      input <= "0000";    --0
+      input <= "0111";    --7
   
       wait for 100 ns;
       selecter <= "100";
       wait for 10 ns;
-      input <= "0110";    --6
+      input <= "0000";    --0
       
       wait for 100 ns;
       selecter <= "101";
@@ -121,12 +128,12 @@ UUT: Register_Bank
       wait for 100 ns;
       selecter <= "110";
       wait for 10 ns;
-      input <= "0001";    --1
+      input <= "1100";    --C
       
       wait for 100 ns;
       selecter <= "111";
       wait for 10 ns;
-      input <= "1100";    --C
+      input <= "1101";    --D
       
       wait for 100 ns;
       reset <= '1';

@@ -56,22 +56,28 @@ UUT:Adder_3_B
         S => S,
         C_out => C_out);
 process
+--IndexNumber
+--220213D = 110 101 110 000 110 101
+--220419N = 110 101 110 100 000 011
+--220303e = 110 101 110 010 001 111
+--220407C = 110 101 110 011 110 111        
+
 begin
     C_in <= '0';
     
     A <= "000";
     wait for 50 ns;
     
-    A <= "010";
-    wait for 50 ns;
-    
-    A <= "110";
+    A <= "101";
     wait for 50 ns;
     
     A <= "111";
     wait for 50 ns;
     
-    A <= "011";
+    A <= "110";
+    wait for 50 ns;
+    
+    A <= "001";
     
     wait;
 end process;

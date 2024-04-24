@@ -52,6 +52,13 @@ UTT : Program_Rom
         Memo_sel => memo_sel,
         Instruction_Bus => Instruction_bus);
         
+   --IndexNumber
+        --220213D = 11 0101 1100 0011 0101
+        --220419N = 11 0101 1101 0000 0011
+        --220303e = 11 0101 1100 1000 1111
+        --220407C = 11 0101 1100 1111 0111        
+            
+            
     rom_process : process
         begin
             memo_sel <= "000";

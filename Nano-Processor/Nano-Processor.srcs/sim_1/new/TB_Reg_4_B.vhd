@@ -70,7 +70,13 @@ UUT : Reg_4_B PORT MAP (
     
     end process;
     
-    reg_process : process
+--IndexNumber
+    --220213D = 11 0101 1100 0011 0101
+    --220419N = 11 0101 1101 0000 0011
+    --220303e = 11 0101 1100 1000 1111
+    --220407C = 11 0101 1100 1111 0111    
+        
+reg_process : process
     begin
         Rst <= '1';
         En <= '0';
@@ -78,13 +84,13 @@ UUT : Reg_4_B PORT MAP (
         wait for 100ns;
         
         Rst <= '0';
-        D <= "0110";
+        D <= "1111";
         wait for 100ns;
         
         En <= '1';
         wait for 10ns;
         
-        D <= "1111";
+        D <= "0011";
         wait for 100ns;
         
         -- reset the register
@@ -92,7 +98,7 @@ UUT : Reg_4_B PORT MAP (
         wait for 100ns;
         Rst <= '0';
         
-        D <= "1001";
+        D <= "0101";
         wait for 100ns;
         
         wait; -- wait forever

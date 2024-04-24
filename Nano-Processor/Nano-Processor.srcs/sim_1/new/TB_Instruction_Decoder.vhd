@@ -71,24 +71,30 @@ begin
         Jump_Address => jmp_addr
     );
     
-    process
-    begin
-        jmp_check <= "0000";
-    -- MOVI R1, 10
-        ins_bus <= "0100010001010";
-        wait for 100ns;
+   --IndexNumber
+    --220213D = 11 0101 1100 0011 0101
+    --220419N = 11 0101 1101 0000 0011
+    --220303e = 11 0101 1100 1000 1111
+    --220407C = 11 0101 1100 1111 0111    
         
-        -- MOVI R2, 1
-        ins_bus <= "0100100000101";
-        wait for 100ns;
-        
-        -- NEG R2
-        ins_bus <= "0010100000000";
-        wait for 100ns;
-        
-        -- JZR 1
-        ins_bus <= "0110000000110";
-        wait;
-    end process;
+        process
+        begin
+            jmp_check <= "0000";
+        -- MOVI R1, 10
+            ins_bus <= "0100010001010";
+            wait for 100ns;
+            
+            -- MOVI R2, 1
+            ins_bus <= "0100100000101";
+            wait for 100ns;
+            
+            -- NEG R2
+            ins_bus <= "0010100000000";
+            wait for 100ns;
+            
+            -- JZR 1
+            ins_bus <= "0110000000110";
+            wait;
+        end process;
 
 end Behavioral;

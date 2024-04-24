@@ -64,24 +64,37 @@ UUT:Add_Sub_Unit PORT MAP(
     overFlow => overflow,
     zero=> zero,
     K => K);
+--IndexNumber
+    --220213D = 11 0101 1100 0011 0101
+    --220419N = 11 0101 1101 0000 0011
+    --220303e = 11 0101 1100 1000 1111
+    --220407C = 11 0101 1100 1111 0111    
+    
  process
     begin
         C_in <= '0';
-     --add 7 to 4
-        K<='0';
-        A<="0111";
-        B<="0100";
+     --add 5 to 3
+        K <= '0';
+        A <= "0011";
+        B <= "0101";
         wait for 100 ns;
-    --subtract 5 from 8
-        K<='1';
-        A<="1000";
-        B<="0101";
+    
+    --subtract 15 from 8
+        K <= '1';
+        A <= "1000";
+        B <= "1111";
         wait for 100 ns;
-        
-        K<='0';
-        A<="0000";
-        B<="0000";
+    
+    --add 3 to 0        
+        K <= '0';
+        A <= "0000";
+        B <= "0011";
+        wait for 100 ns;
+    
+    --subtract 7 from 15        
+        K <= '1';
+        A <= "1111";
+        B <= "0111";
         wait;
     end process;
-
 end Behavioral;
