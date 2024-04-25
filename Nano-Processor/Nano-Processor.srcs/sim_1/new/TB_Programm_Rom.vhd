@@ -62,25 +62,25 @@ UTT : Program_Rom
     rom_process : process
         begin
             memo_sel <= "000";
-            wait for 100ns;
+            wait for 140ns;
             
             memo_sel <= "001";
-            wait for 100ns;
+            wait for 140ns;
             
             memo_sel <= "010";
-            wait for 100ns;
+            wait for 140ns;
                         
             memo_sel <= "011";
-            wait for 100ns;
+            wait for 140ns;
                         
             memo_sel <= "100";
-            wait for 100ns;
+            wait for 140ns;
             
             memo_sel <= "101";
-            wait for 100ns;
+            wait for 140ns;
             
             memo_sel <= "110";
-            wait for 100ns;
+            wait for 140ns;
             
             memo_sel <= "111";
             wait;

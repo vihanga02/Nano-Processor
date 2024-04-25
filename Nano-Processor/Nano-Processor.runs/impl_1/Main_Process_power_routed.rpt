@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-| Date             : Thu Apr 25 01:10:54 2024
+| Date             : Thu Apr 25 11:37:11 2024
 | Host             : vihangamuthumala-HP-Laptop-15s-eq1xxx running 64-bit Ubuntu 22.04.4 LTS
 | Command          : report_power -file Main_Process_power_routed.rpt -pb Main_Process_power_summary_routed.pb -rpx Main_Process_power_routed.rpx
 | Design           : Main_Process
@@ -53,12 +53,12 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      286 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      140 |     20800 |            0.67 |
+| Slice Logic    |    <0.001 |      226 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      103 |     20800 |            0.50 |
 |   CARRY4       |    <0.001 |        8 |      8150 |            0.10 |
-|   Register     |    <0.001 |       49 |     41600 |            0.12 |
-|   Others       |     0.000 |        5 |       --- |             --- |
-| Signals        |    <0.001 |      275 |       --- |             --- |
+|   Register     |    <0.001 |       53 |     41600 |            0.13 |
+|   Others       |     0.000 |        9 |       --- |             --- |
+| Signals        |    <0.001 |      211 |       --- |             --- |
 | I/O            |    <0.001 |       26 |       106 |           24.53 |
 | Static Power   |     0.068 |          |           |                 |
 | Total          |     0.069 |          |           |                 |
@@ -137,17 +137,20 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+---------------------+-----------+
-| Name                | Power (W) |
-+---------------------+-----------+
-| Main_Process        |    <0.001 |
-|   Program_Counter_0 |     0.000 |
-|     Reg_0           |     0.000 |
-|   Register_Bank_0   |     0.000 |
-|     Reg_1           |     0.000 |
-|     Reg_2           |     0.000 |
-|     Reg_3           |     0.000 |
-|   slow_clock        |    <0.001 |
-+---------------------+-----------+
++-----------------------+-----------+
+| Name                  | Power (W) |
++-----------------------+-----------+
+| Main_Process          |    <0.001 |
+|   Program_Counter_0   |     0.000 |
+|     Reg_0             |     0.000 |
+|   Register_Bank_0     |     0.000 |
+|     Decode_3_to_8_0   |     0.000 |
+|       Decode_2_to_4_0 |     0.000 |
+|       Decode_2_to_4_1 |     0.000 |
+|     Reg_2             |     0.000 |
+|     Reg_3             |     0.000 |
+|     Reg_7             |     0.000 |
+|   slow_clock          |    <0.001 |
++-----------------------+-----------+
 
 

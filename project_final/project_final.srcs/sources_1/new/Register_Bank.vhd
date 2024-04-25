@@ -137,22 +137,15 @@ begin
             Clk => Clk,
             R => R6); 
             
-    not_reg_0 <= NOT reg_en_out(0);
+--    not_reg_0 <= NOT reg_en_out(0);
     
     Reg_7 : Reg_4_B
         Port map ( 
             D => Value_In,
-            EN => not_reg_0,
+            EN => '1',
             Reset => Reset,
             Clk => Clk,
             R => R7);                            
             
-    Reg_8 : Reg_8_B
-        port map (
-            D => Value_In,
-            EN => not_reg_0,
-            Reset => Reset,
-            Clk => Clk,
-            R => R7);
 
 end Behavioral;

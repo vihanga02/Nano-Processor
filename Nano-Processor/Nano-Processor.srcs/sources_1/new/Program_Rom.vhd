@@ -33,7 +33,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity Program_Rom is
     Port ( Memo_Sel : in STD_LOGIC_VECTOR (2 downto 0);
-           Instruct_Bus : out STD_LOGIC_VECTOR (12 downto 0));
+           Instruction_Bus : out STD_LOGIC_VECTOR (12 downto 0));
 end Program_Rom;
 
 architecture Behavioral of Program_Rom is
@@ -41,28 +41,29 @@ architecture Behavioral of Program_Rom is
 
 type rom_type is array (0 to 7) of std_logic_vector(12 downto 0); 
     signal program_ROM : rom_type := (
---        "0101110000001",  -- MOV R7, 1
---        "0100100000010",  -- MOV R2, 2
---        "0100110000011",  -- MOV R3, 3
---        "0001110100000",  -- ADD R7, R2
---        "0001110110011",  -- ADD R7, R3
---        "0110000000110",  -- JZR R0, 6      
---        "0110000000101",  -- JZR R0, 5      
---        "0000000000000"
-
-        "0100010000110",
-        "0100100001010",
-        "0100110000011",
-        "1000010100000",
-        
-        "1010000010001",
-        "1010100000011",
-        
-        "1100110000001",
+        "0101110000001",  -- MOV R7, 1
+        "0100100000010",  -- MOV R2, 2
+        "0100110000011",  -- MOV R3, 3
+        "0001110100000",  -- ADD R7, R2
+        "0001110110000",  -- ADD R7, R3
+        "0110000000110",  -- JZR R0, 6      
+        "0110000000101",  -- JZR R0, 5      
         "0000000000000"
+
+--        "0100010000110",
+--        "0100100001010",
+--        "0100110000011",
+--        "1000010100000",
+        
+--        "1010000010001",
+--        "1010100000011",
+        
+--        "1100110000001",
+--        "0000000000000"
+                 
         );
 
 begin
-    Instruct_Bus <= program_ROM(to_integer(unsigned(Memo_Sel)));
+    Instruction_Bus <= program_ROM(to_integer(unsigned(Memo_Sel)));
 
 end Behavioral;

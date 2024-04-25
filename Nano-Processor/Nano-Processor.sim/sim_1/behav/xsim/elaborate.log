@@ -1,19 +1,15 @@
 Vivado Simulator 2018.1
 Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
-Running: /opt/Xilinx/Vivado/2018.1/bin/unwrapped/lnx64.o/xelab -wto 8d8862fb00294595a20e7f2d1afa43ae --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot TB_Comparator_behav xil_defaultlib.TB_Comparator -log elaborate.log 
+Running: /opt/Xilinx/Vivado/2018.1/bin/unwrapped/lnx64.o/xelab -wto 8d8862fb00294595a20e7f2d1afa43ae --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot TB_Main_Process_behav xil_defaultlib.TB_Main_Process -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
+WARNING: [VRFC 10-1625] value in initialization depends on signal b [/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Add_Sub_Unit.vhd:60]
+WARNING: [VRFC 10-1625] value in initialization depends on signal b [/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Add_Sub_Unit.vhd:61]
+WARNING: [VRFC 10-1625] value in initialization depends on signal b [/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Add_Sub_Unit.vhd:62]
+WARNING: [VRFC 10-1625] value in initialization depends on signal b [/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Add_Sub_Unit.vhd:63]
 WARNING: [VRFC 10-1625] value in initialization depends on signal a [/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Comparator.vhd:44]
 WARNING: [VRFC 10-1625] value in initialization depends on signal a [/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Comparator.vhd:45]
 WARNING: [VRFC 10-1625] value in initialization depends on signal a [/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Comparator.vhd:46]
 WARNING: [VRFC 10-1625] value in initialization depends on signal a [/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Comparator.vhd:47]
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling architecture behavioral of entity xil_defaultlib.Comparator [comparator_default]
-Compiling architecture behavioral of entity xil_defaultlib.tb_comparator
-Built simulation snapshot TB_Comparator_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

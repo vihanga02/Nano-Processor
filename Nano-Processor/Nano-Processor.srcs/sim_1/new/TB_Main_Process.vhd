@@ -89,7 +89,7 @@ begin
             Rst <= '1';
             wait for 50ns;
             Rst <= '0';
-            wait for 850ns; --wait forever
+            wait for 650ns; --wait forever
         
         end process;
 

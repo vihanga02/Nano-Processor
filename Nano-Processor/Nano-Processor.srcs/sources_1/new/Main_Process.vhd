@@ -123,7 +123,7 @@ end component;
 
 component Program_Rom is
     Port ( Memo_Sel : in STD_LOGIC_VECTOR (2 downto 0);
-           Instruct_Bus : out STD_LOGIC_VECTOR (12 downto 0));
+           Instruction_Bus : out STD_LOGIC_VECTOR (12 downto 0));
 end component;
 
 component Adder_3_B is
@@ -311,7 +311,7 @@ Program_Counter_0 : Program_counter
 Pro_rom : Program_Rom
    port map (
         Memo_Sel => memory_select,
-        Instruct_Bus => Instruction_Bus);
+        Instruction_Bus => Instruction_Bus);
         
 slow_clock : Slow_clk
     port map(

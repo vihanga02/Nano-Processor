@@ -188,3 +188,30 @@ INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_wor
 INFO: [VRFC 10-307] analyzing entity TB_Comparator
 INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sim_1/new/TB_Comparator.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity TB_Comparator
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Program_Rom.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Program_Rom
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sim_1/new/TB_Main_Process.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TB_Main_Process
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sim_1/new/TB_Instruction_Decoder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TB_Instruction_Decoder
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sim_1/new/TB_Programm_Rom.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TB_Programm_Rom
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Program_Rom.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Program_Rom
+ERROR: [VRFC 10-91] instruct_bus is not declared [/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Program_Rom.vhd:66]
+ERROR: [VRFC 10-1504] unit behavioral ignored due to previous errors [/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Program_Rom.vhd:39]
+INFO: [VRFC 10-240] VHDL file /home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Program_Rom.vhd ignored due to errors
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Program_Rom.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Program_Rom
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Program_Rom.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Program_Rom
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Main_Process.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Main_Process
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Register_Bank.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Register_Bank
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Slow_Clk.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Slow_Clk
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Program_Rom.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Program_Rom
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/vihangamuthumala/Documents/my_work/Nano-Processor/Nano-Processor/Nano-Processor.srcs/sources_1/new/Register_Bank.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Register_Bank

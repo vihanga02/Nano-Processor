@@ -2,3 +2,6 @@ Running: xsim.dir/TB_Comparator_behav/xsimk -simmode gui -wdb TB_Comparator_beha
 Design successfully loaded
 Design Loading Memory Usage: 32340 KB (Peak: 32920 KB)
 Design Loading CPU Usage: 30 ms
+Simulation completed
+Simulation Memory Usage: 114076 KB (Peak: 179612 KB)
+Simulation CPU Usage: 40 ms

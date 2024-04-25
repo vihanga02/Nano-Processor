@@ -92,15 +92,15 @@ begin
             jmp_check <= "0000";
         -- MOVI R1, 10
             ins_bus <= "0100010001010";
-            wait for 100ns;
+            wait for 200ns;
             
             -- MOVI R2, 1
             ins_bus <= "0100100000101";
-            wait for 100ns;
+            wait for 200ns;
             
             -- NEG R2
             ins_bus <= "1010010110011";
-            wait for 100ns;
+            wait for 200ns;
             
             -- JZR 1
             ins_bus <= "1100110000001";

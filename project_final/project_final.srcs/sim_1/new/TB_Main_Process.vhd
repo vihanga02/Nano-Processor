@@ -39,7 +39,7 @@ architecture Behavioral of TB_Main_Process is
 
 component Main_Process is
     Port (
-        Clk_In : in STD_LOGIC;
+        Clk : in STD_LOGIC;
         Reset : in STD_LOGIC;
         Overflow_Flag : out STD_LOGIC;
         Zero_Flag : out STD_LOGIC;
@@ -63,7 +63,7 @@ SIGNAL Seg_data : STD_LOGIC_VECTOR(6 downto 0);
 begin
     UTT : Main_Process
         port map (
-            clk_In => clk,
+            clk => clk,
             Reset => rst,
             Overflow_Flag => ovf,
             Zero_Flag => zeroes,
